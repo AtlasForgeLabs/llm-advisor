@@ -1,0 +1,22 @@
+---
+interface Props {
+  providerName: string;
+}
+
+const { providerName } = Astro.props;
+---
+
+<div class="pricing-unit-guide card">
+  <h3>How API billing units are shown</h3>
+  <p>
+    {providerName} API prices on LLM Advisor use explicit unit labels in the table below. Token model
+    rows show <strong>per 1M tokens</strong> for input, output, and cached input where available.
+  </p>
+  <ul>
+    <li><strong>Input</strong> — input per 1M tokens</li>
+    <li><strong>Output</strong> — output per 1M tokens</li>
+    <li><strong>Cached input</strong> — cached input per 1M tokens when listed</li>
+    <li><strong>Other usage</strong> — per request, per 1K searches, per audio minute, per session-hour, or per hour when applicable</li>
+  </ul>
+  <p>Confirm current units and prices on the official vendor page before making business decisions.</p>
+</div>

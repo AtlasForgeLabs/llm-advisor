@@ -1,0 +1,85 @@
+---
+import SmartLink from '@/components/SmartLink.astro';
+import { getPricingImportManifest } from '@/lib/data';
+
+interface Props {
+  calculatorType: 'api' | 'subscription' | 'team';
+}
+
+const { calculatorType } = Astro.props;
+const manifest = getPricingImportManifest();
+const lastChecked = manifest.imported_at.slice(0, 10);
+
+const officialLinks =
+  calculatorType === 'api'
+    ? [
+        { label: 'OpenAI API pricing', href: 'https://openai.com/api/pricing/' },
+        { label: 'Anthropic API pricing', href: 'https://www.anthropic.com/pricing' }
+      ]
+    : [
+        { label: 'ChatGPT pricing', href: 'https://chatgpt.com/pricing' },
+        { label: 'Anthropic pricing', href: 'https://www.anthropic.com/pricing' }
+      ];
+---
+
+<aside class="calculator-assumptions card" aria-label="Pricing sources and assumptions">
+  <h2>Pricing sources and assumptions</h2>
+  <dl class="assumptions-list">
+    <div>
+      <dt>Source-backed pricing</dt>
+      <dd>
+        LLM Advisor publishes source-backed plan and API prices for selected providers. Coverage is
+        partial — not every provider or model is verified yet.
+      </dd>
+    </div>
+    <div>
+      <dt>Manual input supported</dt>
+      <dd>
+        This calculator uses values you enter. You may copy source-backed prices from LLM Advisor
+        provider pages or enter contract-specific numbers when verified pricing is unavailable.
+      </dd>
+    </div>
+    <div>
+      <dt>Assumptions</dt>
+      <dd>
+        {calculatorType === 'api' ? (
+          <>
+            Estimates assume prices are <strong>per 1M tokens</strong> for input and output unless you
+            adjust fields for another unit. Taxes, discounts, caching credits, batch pricing, minimums,
+            and enterprise terms are not included.
+          </>
+        ) : calculatorType === 'team' ? (
+          <>
+            Estimates combine seat and optional API budget fields you provide. Regional taxes,
+            annual billing discounts, and contract terms are not included.
+          </>
+        ) : (
+          <>
+            Estimates use monthly plan amounts you provide. Annual billing, regional taxes, and bundle
+            inclusions are not included.
+          </>
+        )}
+      </dd>
+    </div>
+    <div>
+      <dt>Last checked</dt>
+      <dd>
+        Latest OpenClaw import on site data: <time datetime={manifest.imported_at}>{lastChecked}</time>
+        . Status: {manifest.import_status.replaceAll('_', ' ')}.
+      </dd>
+    </div>
+    <div>
+      <dt>Official source</dt>
+      <dd>
+        Confirm pricing on vendor pages before business decisions:
+        <ul>
+          {officialLinks.map((link) => (
+            <li>
+              <SmartLink href={link.href}>{link.label}</SmartLink>
+            </li>
+          ))}
+        </ul>
+      </dd>
+    </div>
+  </dl>
+</aside>

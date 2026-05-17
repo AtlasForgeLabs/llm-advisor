@@ -2,6 +2,7 @@
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import DataBadge from '@/components/DataBadge.astro';
 import RecordSummary from '@/components/RecordSummary.astro';
+import ApiPricingUnitGuide from '@/components/ApiPricingUnitGuide.astro';
 import PriceTable from '@/components/PriceTable.astro';
 import SourceList from '@/components/SourceList.astro';
 import { getApiPricesByProvider, getProviders, getSourcesByIds, getVendors } from '@/lib/data';
@@ -15,8 +16,15 @@ const sources = getSourcesByIds(provider.source_ids);
   <section class="page-hero"><div class="container"><h1>{provider.name} API Pricing</h1><p>{provider.description}</p><div class="badge-row"><DataBadge label={provider.provider_type} tone="blue" /><DataBadge label={provider.verification_status} tone="orange" /></div></div></section>
   <section class="content-section"><div class="container data-shell"><div class="prose">
     <h2>Price records</h2>
+    {provider.slug === 'openai-api' || provider.slug === 'anthropic-api' ? (
+      <ApiPricingUnitGuide providerName={provider.name} />
+    ) : null}
     <PriceTable mode="api" prices={prices} />
-    <p>API token, request, and audio units are shown separately. USD reference values for China pricing are labeled reference-only when present.</p>
+    <p>
+      Each row lists billing units in plain text (for example per 1M tokens, per 1K searches, per
+      request, per audio minute, or per session-hour). USD reference values for China pricing are
+      reference-only when present.
+    </p>
     <SourceList sources={sources} />
   </div><RecordSummary record={provider} extra={[{ label: 'Vendor', value: vendor?.name }, { label: 'Price records', value: prices.length }]} /></div></section>
 </SiteLayout>

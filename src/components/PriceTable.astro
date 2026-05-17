@@ -1,6 +1,7 @@
 ---
 import DataBadge from '@/components/DataBadge.astro';
 import SmartLink from '@/components/SmartLink.astro';
+import { billingUnitLabel, describeApiPriceUnits } from '@/lib/pricing-display';
 import type { ApiPrice, SubscriptionPrice } from '@/lib/schema';
 
 interface Props {
@@ -49,10 +50,11 @@ function displayStatus(price: SubscriptionPrice | ApiPrice) {
         <tr>
           <th>Model / service</th>
           <th>Region</th>
-          <th>Unit</th>
+          <th>Billing unit</th>
           <th>Input</th>
           <th>Output</th>
-          <th>Other</th>
+          <th>Cached input</th>
+          <th>Other usage</th>
           <th>Source</th>
           <th>Checked</th>
           <th>Status</th>
@@ -63,6 +65,7 @@ function displayStatus(price: SubscriptionPrice | ApiPrice) {
       {prices.map((price) => {
         const sub = mode === 'subscription' ? (price as SubscriptionPrice) : null;
         const api = mode === 'api' ? (price as ApiPrice) : null;
+        const units = api ? describeApiPriceUnits(api) : null;
         const amountLabel = sub?.metadata_only
           ? sub.enterprise_contact_required
             ? 'Custom / contact sales'
@@ -71,19 +74,15 @@ function displayStatus(price: SubscriptionPrice | ApiPrice) {
             ? sub?.enterprise_contact_required
               ? 'Custom / contact sales'
               : sub?.price_raw_text ?? 'Pending source-backed pricing'
-            : formatAmount(sub.amount, sub.currency);
-        const otherCharges = api
+            : `${formatAmount(sub.amount, sub.currency)} — ${billingUnitLabel(sub.billing_unit)}`;
+        const otherUsageLines = units
           ? [
-              api.request_price != null ? `Request: ${formatAmount(api.request_price, api.currency)}` : null,
-              api.audio_price != null ? `Audio: ${formatAmount(api.audio_price, api.currency)}` : null,
-              api.image_price != null ? `Image: ${formatAmount(api.image_price, api.currency)}` : null,
-              api.input_price == null && api.output_price == null && api.price_raw_text
-                ? api.price_raw_text
-                : null
-            ]
-              .filter(Boolean)
-              .join(' · ') || '—'
-          : null;
+              units.requestText,
+              units.audioText,
+              units.imageText,
+              units.rawFallback
+            ].filter(Boolean)
+          : [];
 
         return (
           <tr>
@@ -102,18 +101,27 @@ function displayStatus(price: SubscriptionPrice | ApiPrice) {
             {mode === 'subscription' ? (
               <>
                 <td>{amountLabel}</td>
-                <td>{sub?.billing_unit ?? '—'}</td>
+                <td>{billingUnitLabel(sub?.billing_unit)}</td>
               </>
             ) : (
               <>
-                <td>{api?.billing_unit ?? '—'}</td>
                 <td>
-                  {api?.input_price != null ? formatAmount(api.input_price, api.currency) : '—'}
+                  <span class="price-unit-label">{units?.billingUnitText ?? '—'}</span>
                 </td>
+                <td>{units?.inputText ?? '—'}</td>
+                <td>{units?.outputText ?? '—'}</td>
+                <td>{units?.cachedInputText ?? '—'}</td>
                 <td>
-                  {api?.output_price != null ? formatAmount(api.output_price, api.currency) : '—'}
+                  {otherUsageLines.length > 0 ? (
+                    <ul class="price-unit-list">
+                      {otherUsageLines.map((line) => (
+                        <li>{line}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    '—'
+                  )}
                 </td>
-                <td>{otherCharges}</td>
               </>
             )}
             <td>

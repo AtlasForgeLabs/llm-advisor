@@ -465,6 +465,71 @@ a.card:hover {
   color: var(--green-500);
 }
 
+.calculator-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.calculator-assumptions {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft);
+}
+
+.calculator-assumptions h2 {
+  margin-top: 0;
+}
+
+.assumptions-list {
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.assumptions-list dt {
+  font-weight: 760;
+  color: var(--navy-950);
+}
+
+.assumptions-list dd {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.assumptions-list ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.pricing-unit-guide {
+  margin: 0 0 20px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft);
+}
+
+.pricing-unit-guide h3 {
+  margin-top: 0;
+}
+
+.price-unit-label {
+  font-weight: 760;
+  color: var(--navy-950);
+}
+
+.price-unit-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.price-note {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
 .calculator-note {
   max-width: 720px;
   margin: 0 0 22px;
