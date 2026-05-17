@@ -45,7 +45,9 @@ Allowed inputs (read-only from Data Hub `pre-import-qa/current/`):
 
 Never import blocked files, raw normalized outputs, excluded regional prices, non-default regional prices, or SGD records. Do not write back to Data Hub.
 
-Preserve `source_url`, `source_accessed_at`, `pricing_region`, `currency`, `region_policy`, `normalized_at`, warnings, and review notes. Metadata-only rows must stay `metadata_only` and must not be shown as verified prices.
+The import is **upsert-based and idempotent**: stable deterministic price IDs, content hashing, insert/update/unchanged counts, bounded history in `reports/openclaw-pricing-import-history.json` (latest 50 runs), and reports in `reports/openclaw-pricing-import-report.json`. Use `npm run import:openclaw-pricing -- --dry-run` before applying. Repeated imports with the same input must not duplicate records. Records absent from a new import batch are retained, not deleted.
+
+Preserve `source_url`, `source_accessed_at`, `pricing_region`, `currency`, `region_policy`, `normalized_at`, warnings, and review notes. Metadata-only rows must stay `metadata_only` and must not be shown as verified prices. Price changes are appended to `src/data/price-changes.json` when imported values change.
 
 ## Design Principles
 

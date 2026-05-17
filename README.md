@@ -155,6 +155,14 @@ Only files under `pre-import-qa/current/` may be imported:
 
 Do not import raw normalized files, blocked records, excluded regional prices, non-default regional prices, or any SGD records.
 
+The import is **idempotent and upsert-based**: stable price IDs, content hashing, insert/update/unchanged counts, bounded history (`reports/openclaw-pricing-import-history.json`, latest 50 runs), and per-run reports. Preview with:
+
+```bash
+npm run import:openclaw-pricing -- --dry-run
+```
+
+Repeated runs with the same QA input must not duplicate records. Rows missing from a new import batch are retained.
+
 - International default pricing: US / USD
 - China default pricing: CN / CNY
 - CNY USD reference values are reference-only when present

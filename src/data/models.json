@@ -807,5 +807,95 @@
       "openclaw_import"
     ],
     "review_reason": null
+  },
+  {
+    "id": "model-openai-openai-gpt-5-5-per-1m-tokens-us-usd",
+    "slug": "openai-openai-gpt-5-5-per-1m-tokens-us-usd",
+    "name": "GPT-5.5",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-5.5 API pricing from OpenClaw QA.",
+    "model_family": "GPT-5.5",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-openai-gpt-5-4-per-1m-tokens-us-usd",
+    "slug": "openai-openai-gpt-5-4-per-1m-tokens-us-usd",
+    "name": "GPT-5.4",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-5.4 API pricing from OpenClaw QA.",
+    "model_family": "GPT-5.4",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-openai-gpt-5-4-mini-per-1m-tokens-us-usd",
+    "slug": "openai-openai-gpt-5-4-mini-per-1m-tokens-us-usd",
+    "name": "GPT-5.4 mini",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-5.4 mini API pricing from OpenClaw QA.",
+    "model_family": "GPT-5.4 mini",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
   }
 ]

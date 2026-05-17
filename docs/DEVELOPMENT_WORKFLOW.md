@@ -19,10 +19,13 @@ npm run dev
 After QA approves `pre-import-qa/current/` outputs in the Data Hub:
 
 ```bash
+npm run import:openclaw-pricing -- --dry-run
 npm run import:openclaw-pricing
 npm run build
 npm run check
 ```
+
+Imports are idempotent upserts from `pre-import-qa/current` importable files only. Reports land in `reports/openclaw-pricing-import-report.json`; history is capped at 50 entries in `reports/openclaw-pricing-import-history.json`.
 
 ## Build
 

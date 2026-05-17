@@ -1,14 +1,16 @@
 {
-  "imported_at": "2026-05-17T14:24:47Z",
+  "imported_at": "2026-05-17T15:18:11.123Z",
   "qa_import_decision": "import_ready_with_warnings",
   "import_status": "verified_with_warnings",
   "subscription_imported_count": 10,
   "api_imported_count": 16,
   "metadata_only_count": 7,
+  "last_import_batch_id": "import-2026-05-17T15-18-11Z",
+  "input_hash": "fedb7b27445d5d527f87e70afea1c9b2d634da6c218e0813a14c50e0c6cb7f20",
   "qa_warnings": [
-    "OpenAI pricing page was localized to Chinese but USD amounts were verified on the official page.",
+    "OpenAI pricing page was localized to Chinese but USD amounts were verified.",
     "DeepSeek and ByteDance may need deeper scroll for remaining pricing gaps.",
-    "Perplexity consumer pricing remains pending and was not imported."
+    "Perplexity consumer pricing remains pending."
   ],
   "source_directory": "/Users/mini/AtlasForge/prod-env/atlasforge-data-hub/openclaw/llm-advisor/pre-import-qa/current"
 }

@@ -1,16 +1,31 @@
 {
-  "imported_at": "2026-05-17T14:24:47Z",
-  "qa_import_decision": "import_ready_with_warnings",
-  "import_status": "verified_with_warnings",
-  "subscription_imported_count": 10,
-  "api_imported_count": 16,
-  "metadata_only_count": 7,
-  "qa_warnings": [
-    "OpenAI pricing page was localized to Chinese but USD amounts were verified on the official page.",
-    "DeepSeek and ByteDance may need deeper scroll for remaining pricing gaps.",
-    "Perplexity consumer pricing remains pending and was not imported."
-  ],
+  "import_batch_id": "import-2026-05-17T15-18-46Z",
+  "project_slug": "llm-advisor",
   "source_directory": "/Users/mini/AtlasForge/prod-env/atlasforge-data-hub/openclaw/llm-advisor/pre-import-qa/current",
+  "qa_summary_path": "/Users/mini/AtlasForge/prod-env/atlasforge-data-hub/openclaw/llm-advisor/pre-import-qa/current/qa-summary.json",
+  "started_at": "2026-05-17T15:18:46.171Z",
+  "finished_at": "2026-05-17T15:18:46.179Z",
+  "import_decision": "import_ready_with_warnings",
+  "source_qa_run_id": "2026-05-17T14:24:47Z",
+  "imported_subscription_prices_count": 10,
+  "imported_api_prices_count": 16,
+  "metadata_only_count": 7,
+  "inserted_records_count": 0,
+  "updated_records_count": 0,
+  "unchanged_records_count": 33,
+  "skipped_records_count": 0,
+  "warnings_count": 3,
+  "errors_count": 0,
+  "input_hash": "fedb7b27445d5d527f87e70afea1c9b2d634da6c218e0813a14c50e0c6cb7f20",
+  "data_hash_before": "627fd8df7ac445caf865524ac247a9a0524b1c02adf7b38d25141cacee6ecbcd",
+  "data_hash_after": "627fd8df7ac445caf865524ac247a9a0524b1c02adf7b38d25141cacee6ecbcd",
+  "data_unchanged": true,
+  "dry_run": true,
+  "notes": [
+    "Upsert by stable deterministic price IDs.",
+    "Non-import pending records and prior OpenClaw rows absent from input are retained.",
+    "International default US/USD; China default CN/CNY; SGD excluded."
+  ],
   "subscription_price_ids": [
     "sub-openai-free",
     "sub-openai-go",
@@ -31,9 +46,9 @@
     "sub-bytedance-coding-plan-enterprise"
   ],
   "api_price_ids": [
-    "api-openai-gpt-5.5",
-    "api-openai-gpt-5.4",
-    "api-openai-gpt-5.4-mini",
+    "api-openai-openai-gpt-5-5-per-1m-tokens-us-usd",
+    "api-openai-openai-gpt-5-4-per-1m-tokens-us-usd",
+    "api-openai-openai-gpt-5-4-mini-per-1m-tokens-us-usd",
     "api-openai-gpt-realtime-2",
     "api-openai-gpt-realtime-translate",
     "api-openai-gpt-realtime-whisper",
@@ -48,22 +63,5 @@
     "api-anthropic-platform-web-search",
     "api-anthropic-platform-code-execution"
   ],
-  "metadata_only_ids": [
-    "sub-openai-enterprise",
-    "sub-openai-codex-for-work",
-    "sub-anthropic-max",
-    "sub-bytedance-agent-plan-personal",
-    "sub-bytedance-agent-plan-enterprise",
-    "sub-bytedance-coding-plan-personal",
-    "sub-bytedance-coding-plan-enterprise"
-  ],
-  "retained_pending_subscription_ids": [
-    "sub-chatgpt-team-pending",
-    "sub-gemini-advanced-pending"
-  ],
-  "retained_pending_api_ids": [
-    "api-google-gemini-family-pending",
-    "api-deepseek-family-pending",
-    "api-qwen-family-pending"
-  ]
+  "price_change_ids": []
 }
