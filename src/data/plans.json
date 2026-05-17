@@ -1,11 +1,693 @@
 [
-  {"id":"plan-chatgpt-free","slug":"chatgpt-free","name":"ChatGPT Free","vendor_id":"vendor-openai","product_id":"product-chatgpt","description":"Free ChatGPT access tier. Exact limits and included models require current verification.","plan_type":"free","lifecycle_status":"active","billing_units":["month"],"features":[{"id":"feature-chat","name":"Chat access","category":"core","description":"General assistant access; limits need verification.","data_status":"pending_verification"}],"source_ids":["src-openai-chatgpt-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.65,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs official plan limits and current price review."},
-  {"id":"plan-chatgpt-plus","slug":"chatgpt-plus","name":"ChatGPT Plus","vendor_id":"vendor-openai","product_id":"product-chatgpt","description":"Individual paid ChatGPT plan. Price intentionally not seeded until source-backed normalization.","plan_type":"pro","lifecycle_status":"active","billing_units":["month"],"features":[{"id":"feature-higher-limits","name":"Higher limits","category":"usage","description":"Specific limits require verification.","data_status":"pending_verification"}],"source_ids":["src-openai-chatgpt-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.65,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs source-backed current price."},
-  {"id":"plan-chatgpt-team","slug":"chatgpt-team","name":"ChatGPT Team","vendor_id":"vendor-openai","product_id":"product-chatgpt","description":"Team-oriented ChatGPT plan. Seat pricing requires source-backed verification.","plan_type":"team","lifecycle_status":"active","billing_units":["seat_month"],"features":[{"id":"feature-team-admin","name":"Team administration","category":"admin","description":"Administrative features require verification.","data_status":"pending_verification"}],"source_ids":["src-openai-chatgpt-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.65,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs source-backed current seat price."},
-  {"id":"plan-claude-free","slug":"claude-free","name":"Claude Free","vendor_id":"vendor-anthropic","product_id":"product-claude","description":"Free Claude access tier. Limits and availability require verification.","plan_type":"free","lifecycle_status":"active","billing_units":["month"],"features":[{"id":"feature-claude-chat","name":"Claude chat access","category":"core","description":"Specific limits require verification.","data_status":"pending_verification"}],"source_ids":["src-anthropic-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.62,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs source-backed plan details."},
-  {"id":"plan-claude-pro","slug":"claude-pro","name":"Claude Pro","vendor_id":"vendor-anthropic","product_id":"product-claude","description":"Individual paid Claude plan. Exact price intentionally not seeded.","plan_type":"pro","lifecycle_status":"active","billing_units":["month"],"features":[{"id":"feature-claude-higher-usage","name":"Higher usage access","category":"usage","description":"Specific limits require verification.","data_status":"pending_verification"}],"source_ids":["src-anthropic-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.62,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs source-backed current price."},
-  {"id":"plan-gemini-advanced","slug":"gemini-advanced","name":"Gemini Advanced","vendor_id":"vendor-google","product_id":"product-gemini","description":"Google Gemini paid consumer plan area. Pricing and packaging require verification.","plan_type":"pro","lifecycle_status":"active","billing_units":["month"],"features":[{"id":"feature-google-ai-access","name":"Advanced AI access","category":"core","description":"Included services require verification.","data_status":"pending_verification"}],"source_ids":["src-google-ai-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.6,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs product and market-specific price verification."},
-  {"id":"plan-copilot-pro","slug":"copilot-pro","name":"Copilot Pro","vendor_id":"vendor-microsoft","product_id":"product-microsoft-copilot","description":"Microsoft Copilot individual paid plan area. Exact price not seeded.","plan_type":"pro","lifecycle_status":"active","billing_units":["month"],"features":[{"id":"feature-copilot-access","name":"Copilot access","category":"core","description":"App inclusion requires verification.","data_status":"pending_verification"}],"source_ids":["src-microsoft-copilot"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.58,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs market-specific price verification."},
-  {"id":"plan-perplexity-pro","slug":"perplexity-pro","name":"Perplexity Pro","vendor_id":"vendor-perplexity","product_id":"product-perplexity","description":"Perplexity paid plan area. Exact price intentionally not seeded.","plan_type":"pro","lifecycle_status":"active","billing_units":["month"],"features":[{"id":"feature-research","name":"Research features","category":"research","description":"Plan limits require verification.","data_status":"pending_verification"}],"source_ids":["src-perplexity-pro"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.6,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs source-backed current price."},
-  {"id":"plan-kimi-basic","slug":"kimi-basic","name":"Kimi Basic","vendor_id":"vendor-moonshot","product_id":"product-kimi","description":"Kimi assistant baseline access area. Exact plan terms require verification.","plan_type":"unknown","lifecycle_status":"active","billing_units":["month"],"features":[{"id":"feature-long-context","name":"Long context assistant use","category":"core","description":"Limits require verification.","data_status":"pending_verification"}],"source_ids":["src-kimi"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.55,"quality_flags":["pricing_not_seeded"],"needs_review":true,"review_reason":"Needs plan taxonomy and pricing verification."}
+  {
+    "id": "plan-chatgpt-free",
+    "slug": "chatgpt-free",
+    "name": "Free",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-chatgpt",
+    "description": "Free ChatGPT access tier. Exact limits and included models require current verification.",
+    "plan_type": "free",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "unknown"
+    ],
+    "features": [
+      {
+        "id": "feature-chat",
+        "name": "Chat access",
+        "category": "core",
+        "description": "General assistant access; limits need verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-openai-chatgpt-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import",
+      "verified_with_warnings"
+    ],
+    "needs_review": false,
+    "review_reason": "Needs official plan limits and current price review.",
+    "normalized_at": "2026-05-17T14:15:16.000Z"
+  },
+  {
+    "id": "plan-chatgpt-plus",
+    "slug": "chatgpt-plus",
+    "name": "Plus",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-chatgpt",
+    "description": "Individual paid ChatGPT plan. Price intentionally not seeded until source-backed normalization.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [
+      {
+        "id": "feature-higher-limits",
+        "name": "Higher limits",
+        "category": "usage",
+        "description": "Specific limits require verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-openai-chatgpt-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import",
+      "verified_with_warnings"
+    ],
+    "needs_review": false,
+    "review_reason": "Needs source-backed current price.",
+    "normalized_at": "2026-05-17T14:15:16.000Z"
+  },
+  {
+    "id": "plan-chatgpt-team",
+    "slug": "chatgpt-team",
+    "name": "ChatGPT Team",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-chatgpt",
+    "description": "Team-oriented ChatGPT plan. Seat pricing requires source-backed verification.",
+    "plan_type": "team",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "seat_month"
+    ],
+    "features": [
+      {
+        "id": "feature-team-admin",
+        "name": "Team administration",
+        "category": "admin",
+        "description": "Administrative features require verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-openai-chatgpt-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.65,
+    "quality_flags": [
+      "pricing_not_seeded"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs source-backed current seat price."
+  },
+  {
+    "id": "plan-claude-free",
+    "slug": "claude-free",
+    "name": "Free",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "description": "Free Claude access tier. Limits and availability require verification.",
+    "plan_type": "free",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "unknown"
+    ],
+    "features": [
+      {
+        "id": "feature-claude-chat",
+        "name": "Claude chat access",
+        "category": "core",
+        "description": "Specific limits require verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-anthropic-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "needs_review": false,
+    "review_reason": "Needs source-backed plan details.",
+    "normalized_at": "2026-05-17T14:15:16.000Z"
+  },
+  {
+    "id": "plan-claude-pro",
+    "slug": "claude-pro",
+    "name": "Pro",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "description": "Individual paid Claude plan. Exact price intentionally not seeded.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [
+      {
+        "id": "feature-claude-higher-usage",
+        "name": "Higher usage access",
+        "category": "usage",
+        "description": "Specific limits require verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-anthropic-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "needs_review": false,
+    "review_reason": "Needs source-backed current price.",
+    "normalized_at": "2026-05-17T14:15:16.000Z"
+  },
+  {
+    "id": "plan-gemini-advanced",
+    "slug": "gemini-advanced",
+    "name": "Gemini Advanced",
+    "vendor_id": "vendor-google",
+    "product_id": "product-gemini",
+    "description": "Google Gemini paid consumer plan area. Pricing and packaging require verification.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [
+      {
+        "id": "feature-google-ai-access",
+        "name": "Advanced AI access",
+        "category": "core",
+        "description": "Included services require verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-google-ai-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.6,
+    "quality_flags": [
+      "pricing_not_seeded"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs product and market-specific price verification."
+  },
+  {
+    "id": "plan-copilot-pro",
+    "slug": "copilot-pro",
+    "name": "Copilot Pro",
+    "vendor_id": "vendor-microsoft",
+    "product_id": "product-microsoft-copilot",
+    "description": "Microsoft Copilot individual paid plan area. Exact price not seeded.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [
+      {
+        "id": "feature-copilot-access",
+        "name": "Copilot access",
+        "category": "core",
+        "description": "App inclusion requires verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-microsoft-copilot"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.58,
+    "quality_flags": [
+      "pricing_not_seeded"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs market-specific price verification."
+  },
+  {
+    "id": "plan-perplexity-pro",
+    "slug": "perplexity-pro",
+    "name": "Perplexity Pro",
+    "vendor_id": "vendor-perplexity",
+    "product_id": "product-perplexity",
+    "description": "Perplexity paid plan area. Exact price intentionally not seeded.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [
+      {
+        "id": "feature-research",
+        "name": "Research features",
+        "category": "research",
+        "description": "Plan limits require verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-perplexity-pro"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.6,
+    "quality_flags": [
+      "pricing_not_seeded"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs source-backed current price."
+  },
+  {
+    "id": "plan-kimi-basic",
+    "slug": "kimi-basic",
+    "name": "Kimi Basic",
+    "vendor_id": "vendor-moonshot",
+    "product_id": "product-kimi",
+    "description": "Kimi assistant baseline access area. Exact plan terms require verification.",
+    "plan_type": "unknown",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [
+      {
+        "id": "feature-long-context",
+        "name": "Long context assistant use",
+        "category": "core",
+        "description": "Limits require verification.",
+        "data_status": "pending_verification"
+      }
+    ],
+    "source_ids": [
+      "src-kimi"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.55,
+    "quality_flags": [
+      "pricing_not_seeded"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs plan taxonomy and pricing verification."
+  },
+  {
+    "id": "plan-chatgpt-go",
+    "slug": "chatgpt-go",
+    "name": "Go",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-chatgpt",
+    "description": "Go plan for ChatGPT. Source-backed pricing imported from OpenClaw QA.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import",
+      "verified_with_warnings"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "plan-chatgpt-pro",
+    "slug": "chatgpt-pro",
+    "name": "Pro",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-chatgpt",
+    "description": "Pro plan for ChatGPT. Source-backed pricing imported from OpenClaw QA.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import",
+      "verified_with_warnings"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "plan-chatgpt-business",
+    "slug": "chatgpt-business",
+    "name": "Business",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-chatgpt",
+    "description": "Business plan for ChatGPT. Source-backed pricing imported from OpenClaw QA.",
+    "plan_type": "team",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "seat_month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import",
+      "verified_with_warnings"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "plan-claude-team-standard",
+    "slug": "claude-team-standard",
+    "name": "Team (Standard)",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "description": "Team (Standard) plan for Claude. Source-backed pricing imported from OpenClaw QA.",
+    "plan_type": "team",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "seat_month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "plan-claude-team-premium",
+    "slug": "claude-team-premium",
+    "name": "Team (Premium)",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "description": "Team (Premium) plan for Claude. Source-backed pricing imported from OpenClaw QA.",
+    "plan_type": "team",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "seat_month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "plan-claude-enterprise",
+    "slug": "claude-enterprise",
+    "name": "Enterprise",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "description": "Enterprise plan for Claude. Source-backed pricing imported from OpenClaw QA.",
+    "plan_type": "enterprise",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "seat_month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "plan-chatgpt-enterprise",
+    "slug": "chatgpt-enterprise",
+    "name": "Enterprise",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-chatgpt",
+    "description": "Enterprise plan for ChatGPT. Metadata only; numeric price not verified.",
+    "plan_type": "enterprise",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "seat_month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "partial",
+    "verification_status": "needs_review",
+    "needs_review": true,
+    "confidence_score": 1,
+    "quality_flags": [
+      "metadata_only",
+      "pricing_not_verified"
+    ],
+    "review_reason": "Metadata-only plan record without verified numeric price."
+  },
+  {
+    "id": "plan-chatgpt-codex-for-work",
+    "slug": "chatgpt-codex-for-work",
+    "name": "Codex for Work",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-chatgpt",
+    "description": "Codex for Work plan for ChatGPT. Metadata only; numeric price not verified.",
+    "plan_type": "team",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "unknown"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "partial",
+    "verification_status": "needs_review",
+    "needs_review": true,
+    "confidence_score": 1,
+    "quality_flags": [
+      "metadata_only",
+      "pricing_not_verified"
+    ],
+    "review_reason": "Metadata-only plan record without verified numeric price."
+  },
+  {
+    "id": "plan-claude-max",
+    "slug": "claude-max",
+    "name": "Max",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "description": "Max plan for Claude. Metadata only; numeric price not verified.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "partial",
+    "verification_status": "needs_review",
+    "needs_review": true,
+    "confidence_score": 1,
+    "quality_flags": [
+      "metadata_only",
+      "pricing_not_verified"
+    ],
+    "review_reason": "Max shows 'From $100' - price varies by usage"
+  },
+  {
+    "id": "plan-doubao-agent-plan-personal",
+    "slug": "doubao-agent-plan-personal",
+    "name": "Agent Plan 个人版",
+    "vendor_id": "vendor-bytedance",
+    "product_id": "product-doubao",
+    "description": "Agent Plan 个人版 plan for Doubao. Metadata only; numeric price not verified.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "unknown"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "partial",
+    "verification_status": "needs_review",
+    "needs_review": true,
+    "confidence_score": 0.7,
+    "quality_flags": [
+      "metadata_only",
+      "pricing_not_verified"
+    ],
+    "review_reason": "Plan names visible but numeric prices require deeper scrolling"
+  },
+  {
+    "id": "plan-doubao-agent-plan-enterprise",
+    "slug": "doubao-agent-plan-enterprise",
+    "name": "Agent Plan 企业版",
+    "vendor_id": "vendor-bytedance",
+    "product_id": "product-doubao",
+    "description": "Agent Plan 企业版 plan for Doubao. Metadata only; numeric price not verified.",
+    "plan_type": "enterprise",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "seat_month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "partial",
+    "verification_status": "needs_review",
+    "needs_review": true,
+    "confidence_score": 0.7,
+    "quality_flags": [
+      "metadata_only",
+      "pricing_not_verified"
+    ],
+    "review_reason": "Plan names visible but numeric prices require deeper scrolling"
+  },
+  {
+    "id": "plan-doubao-coding-plan-personal",
+    "slug": "doubao-coding-plan-personal",
+    "name": "Coding Plan 个人版",
+    "vendor_id": "vendor-bytedance",
+    "product_id": "product-doubao",
+    "description": "Coding Plan 个人版 plan for Doubao. Metadata only; numeric price not verified.",
+    "plan_type": "pro",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "unknown"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "partial",
+    "verification_status": "needs_review",
+    "needs_review": true,
+    "confidence_score": 0.7,
+    "quality_flags": [
+      "metadata_only",
+      "pricing_not_verified"
+    ],
+    "review_reason": "Plan names visible but numeric prices require deeper scrolling"
+  },
+  {
+    "id": "plan-doubao-coding-plan-enterprise",
+    "slug": "doubao-coding-plan-enterprise",
+    "name": "Coding Plan 企业版",
+    "vendor_id": "vendor-bytedance",
+    "product_id": "product-doubao",
+    "description": "Coding Plan 企业版 plan for Doubao. Metadata only; numeric price not verified.",
+    "plan_type": "enterprise",
+    "lifecycle_status": "active",
+    "billing_units": [
+      "seat_month"
+    ],
+    "features": [],
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "partial",
+    "verification_status": "needs_review",
+    "needs_review": true,
+    "confidence_score": 0.7,
+    "quality_flags": [
+      "metadata_only",
+      "pricing_not_verified"
+    ],
+    "review_reason": "Plan names visible but numeric prices require deeper scrolling"
+  }
 ]

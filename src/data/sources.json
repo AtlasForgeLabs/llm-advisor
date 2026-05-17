@@ -5,10 +5,10 @@
     "source_name": "OpenAI API Pricing",
     "source_type": "official_pricing_page",
     "source_official": true,
-    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_accessed_at": "2026-05-17T14:15:16.000Z",
     "source_confidence": 0.9,
     "source_notes": "Official pricing source URL recorded for future verification. Exact values are not seeded in this task.",
-    "checked_at": "2026-05-17T00:00:00.000Z"
+    "checked_at": "2026-05-17T14:15:16.000Z"
   },
   {
     "id": "src-openai-chatgpt-pricing",
@@ -26,9 +26,9 @@
     "source_name": "Anthropic Pricing",
     "source_type": "official_pricing_page",
     "source_official": true,
-    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_accessed_at": "2026-05-17T14:15:16.000Z",
     "source_confidence": 0.9,
-    "checked_at": "2026-05-17T00:00:00.000Z"
+    "checked_at": "2026-05-17T14:15:16.000Z"
   },
   {
     "id": "src-google-ai-pricing",
@@ -139,5 +139,27 @@
     "source_accessed_at": "2026-05-17T00:00:00.000Z",
     "source_confidence": 0.7,
     "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-import-openai-free",
+    "source_url": "https://chatgpt.com/pricing",
+    "source_name": "Free official pricing",
+    "source_type": "official_pricing_page",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T14:15:16.000Z",
+    "source_confidence": 1,
+    "source_notes": "CN (page auto-localized to zh-Hans-CN but shows US$ pricing)",
+    "checked_at": "2026-05-17T14:15:16.000Z"
+  },
+  {
+    "id": "src-import-bytedance-agent-plan-personal",
+    "source_url": "https://www.volcengine.com/docs/82379/1399008",
+    "source_name": "Agent Plan 个人版 official pricing",
+    "source_type": "official_pricing_page",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T14:15:16.000Z",
+    "source_confidence": 0.7,
+    "source_notes": "CN",
+    "checked_at": "2026-05-17T14:15:16.000Z"
   }
 ]

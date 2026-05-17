@@ -2,6 +2,7 @@
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import DataBadge from '@/components/DataBadge.astro';
 import RecordSummary from '@/components/RecordSummary.astro';
+import PriceTable from '@/components/PriceTable.astro';
 import SourceList from '@/components/SourceList.astro';
 import { getApiPricesByProvider, getProviders, getSourcesByIds, getVendors } from '@/lib/data';
 export function getStaticPaths() { return getProviders().map((provider) => ({ params: { provider: provider.slug }, props: { provider } })); }
@@ -14,8 +15,8 @@ const sources = getSourcesByIds(provider.source_ids);
   <section class="page-hero"><div class="container"><h1>{provider.name} API Pricing</h1><p>{provider.description}</p><div class="badge-row"><DataBadge label={provider.provider_type} tone="blue" /><DataBadge label={provider.verification_status} tone="orange" /></div></div></section>
   <section class="content-section"><div class="container data-shell"><div class="prose">
     <h2>Price records</h2>
-    <table class="data-table"><thead><tr><th>Record</th><th>Currency</th><th>Billing unit</th><th>Input</th><th>Output</th><th>Status</th></tr></thead><tbody>{prices.map((price) => <tr><td>{price.name}</td><td>{price.currency}</td><td>{price.billing_unit}</td><td>{price.input_price ?? 'Pending verification'}</td><td>{price.output_price ?? 'Pending verification'}</td><td>{price.verification_status}</td></tr>)}</tbody></table>
-    <p>Numeric API prices remain blank until official source URLs and access timestamps are attached to the price record.</p>
+    <PriceTable mode="api" prices={prices} />
+    <p>API token, request, and audio units are shown separately. USD reference values for China pricing are labeled reference-only when present.</p>
     <SourceList sources={sources} />
   </div><RecordSummary record={provider} extra={[{ label: 'Vendor', value: vendor?.name }, { label: 'Price records', value: prices.length }]} /></div></section>
 </SiteLayout>

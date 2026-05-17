@@ -169,6 +169,38 @@ for (const change of data['price-changes']) {
   if (change.product_id && !productIds.has(change.product_id)) failures.push(`Price change ${change.id} references missing product_id ${change.product_id}`);
 }
 
+for (const price of [...data['api-prices'], ...data['subscription-prices']]) {
+  if (price.currency === 'SGD' || price.pricing_region === 'SG') {
+    failures.push(`Public price record ${price.id} must not use SGD or SG default region`);
+  }
+  if (price.metadata_only && price.verification_status === 'verified') {
+    failures.push(`Metadata-only price ${price.id} must not be marked verified`);
+  }
+  if (
+    price.metadata_only &&
+    price.amount !== null &&
+    price.amount !== undefined &&
+    !price.enterprise_contact_required
+  ) {
+    failures.push(`Metadata-only subscription price ${price.id} must not carry a verified numeric amount`);
+  }
+  if (
+    (price.input_price != null ||
+      price.output_price != null ||
+      price.amount != null ||
+      price.amount === 0) &&
+    price.verification_status !== 'pending_verification' &&
+    !price.metadata_only
+  ) {
+    if (!price.source_url || !price.source_accessed_at) {
+      failures.push(`Source-backed price ${price.id} missing source_url or source_accessed_at`);
+    }
+    if (!price.pricing_region || !price.currency) {
+      failures.push(`Source-backed price ${price.id} missing pricing_region or currency`);
+    }
+  }
+}
+
 for (const [fileName, records] of Object.entries(data)) {
   records.forEach((record, index) => {
     const label = `${fileName}[${index}]`;

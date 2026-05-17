@@ -15,7 +15,34 @@ export type DataQualityStatus = 'verified' | 'pending_verification' | 'partial' 
 
 export type LifecycleStatus = 'active' | 'preview' | 'beta' | 'deprecated' | 'unknown';
 
-export type VerificationStatus = 'verified' | 'pending_verification' | 'needs_review' | 'rejected';
+export type VerificationStatus =
+  | 'verified'
+  | 'verified_with_warnings'
+  | 'pending_verification'
+  | 'needs_review'
+  | 'rejected';
+
+export type PricingRegion = 'US' | 'CN' | 'EU' | 'SG' | 'GLOBAL' | 'UNKNOWN';
+
+export type RegionPolicy =
+  | 'default_international_us'
+  | 'default_china_cn'
+  | 'excluded_regional'
+  | 'unknown';
+
+export interface PricingImportFields {
+  pricing_region?: PricingRegion;
+  region_policy?: RegionPolicy;
+  price_raw_text?: string;
+  metadata_only?: boolean;
+  enterprise_contact_required?: boolean;
+  seat_based?: boolean;
+  minimum_seats?: number | null;
+  import_warnings?: string[];
+  openclaw_price_id?: string;
+  usd_reference_note?: string;
+  final_source_url?: string;
+}
 
 export type RegionAvailability = {
   regions: string[];
@@ -137,7 +164,7 @@ export interface Provider extends BaseRecord {
   region_availability: RegionAvailability[];
 }
 
-export interface ApiPrice extends BaseRecord {
+export interface ApiPrice extends BaseRecord, PricingImportFields {
   provider_id: string;
   model_id?: string;
   currency: Currency;
@@ -145,10 +172,13 @@ export interface ApiPrice extends BaseRecord {
   input_price?: number | null;
   output_price?: number | null;
   cached_input_price?: number | null;
+  request_price?: number | null;
+  audio_price?: number | null;
+  image_price?: number | null;
   notes?: string;
 }
 
-export interface SubscriptionPrice extends BaseRecord {
+export interface SubscriptionPrice extends BaseRecord, PricingImportFields {
   vendor_id: string;
   product_id: string;
   plan_id: string;
@@ -156,6 +186,17 @@ export interface SubscriptionPrice extends BaseRecord {
   billing_unit: BillingUnit;
   amount?: number | null;
   notes?: string;
+}
+
+export interface PricingImportManifest {
+  imported_at: string;
+  qa_import_decision: string;
+  import_status: 'verified_with_warnings' | 'verified' | 'blocked';
+  subscription_imported_count: number;
+  api_imported_count: number;
+  metadata_only_count: number;
+  qa_warnings: string[];
+  source_directory: string;
 }
 
 export interface Comparison extends BaseRecord {

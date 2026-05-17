@@ -14,6 +14,16 @@ Run the local Astro server:
 npm run dev
 ```
 
+## OpenClaw pricing import
+
+After QA approves `pre-import-qa/current/` outputs in the Data Hub:
+
+```bash
+npm run import:openclaw-pricing
+npm run build
+npm run check
+```
+
 ## Build
 
 ```bash

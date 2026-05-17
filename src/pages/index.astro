@@ -1,6 +1,9 @@
 ---
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import { lastUpdated } from '@/data/site';
+import { getPricingImportManifest } from '@/lib/data';
+
+const pricingImport = getPricingImportManifest();
 
 const pillars = [
   {
@@ -129,8 +132,13 @@ const trustRows = [
       <div class="section-head">
         <h2>Start with the right cost question</h2>
         <p>
-          The site is data-driven, but cautious: seeded records are visible only with their
-          verification state, and exact prices are withheld until they are source-backed.
+          Source-backed pricing is available for selected plans and API models. Some providers
+          remain pending due to regional, rendering, or access limitations.
+        </p>
+        <p class="import-status-note">
+          Last OpenClaw import: {pricingImport.imported_at.slice(0, 10)} · Status:{' '}
+          {pricingImport.import_status.replaceAll('_', ' ')} · {pricingImport.subscription_imported_count}{' '}
+          subscription and {pricingImport.api_imported_count} API records imported (QA-approved).
         </p>
       </div>
       <div class="grid">

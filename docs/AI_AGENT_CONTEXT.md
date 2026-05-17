@@ -20,6 +20,8 @@ The current implementation includes:
 - client-side calculator pages
 - GitHub Actions deployment workflow
 - lightweight foundation and data validation scripts
+- OpenClaw QA-approved pricing import via `npm run import:openclaw-pricing`
+- `PriceTable` for honest subscription/API price display with source links
 
 ## Important Directories
 

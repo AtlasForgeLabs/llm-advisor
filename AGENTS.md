@@ -33,6 +33,20 @@ Do not add exact numeric pricing unless the record includes source attribution a
 
 Visible pages must distinguish verified data from pending verification and must show source and timestamp context where relevant.
 
+## OpenClaw pricing import
+
+Import QA-approved pricing only with `npm run import:openclaw-pricing` (`scripts/import-openclaw-pricing.mjs`).
+
+Allowed inputs (read-only from Data Hub `pre-import-qa/current/`):
+
+- `importable-normalized-subscription-prices.json`
+- `importable-normalized-api-prices.json`
+- `metadata-only-records.json`
+
+Never import blocked files, raw normalized outputs, excluded regional prices, non-default regional prices, or SGD records. Do not write back to Data Hub.
+
+Preserve `source_url`, `source_accessed_at`, `pricing_region`, `currency`, `region_policy`, `normalized_at`, warnings, and review notes. Metadata-only rows must stay `metadata_only` and must not be shown as verified prices.
+
 ## Design Principles
 
 - light-first interface

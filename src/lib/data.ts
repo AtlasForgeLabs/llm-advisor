@@ -9,12 +9,14 @@ import comparisons from '@/data/comparisons.json';
 import useCases from '@/data/use-cases.json';
 import priceChanges from '@/data/price-changes.json';
 import sources from '@/data/sources.json';
+import pricingImportManifest from '@/data/pricing-import-manifest.json';
 import type {
   ApiPrice,
   Comparison,
   Model,
   Plan,
   PriceChange,
+  PricingImportManifest,
   Product,
   Provider,
   Source,
@@ -132,6 +134,10 @@ export function getSourcesByIds(sourceIds: string[] = []) {
   return sourceIds
     .map((id) => typedSources.find((source) => source.id === id))
     .filter((source): source is Source => Boolean(source));
+}
+
+export function getPricingImportManifest() {
+  return pricingImportManifest as PricingImportManifest;
 }
 
 export function getDataFreshnessSummary() {

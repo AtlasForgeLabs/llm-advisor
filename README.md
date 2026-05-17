@@ -137,9 +137,31 @@ See `AGENTS.md` and `docs/` before making meaningful changes.
 
 The production data contract lives in `src/lib/schema.ts`. Static records live in `src/data/*.json`.
 
-Current data files include vendors, products, plans, models, providers, API price placeholders, subscription price placeholders, comparisons, use cases, price changes, and sources.
+Current data files include vendors, products, plans, models, providers, API prices, subscription prices, comparisons, use cases, price changes, sources, and `pricing-import-manifest.json`.
 
-Important: seeded records are production-shaped but mostly pending verification. Exact numeric prices are intentionally omitted or `null` until source-backed values are added with source URL and access timestamps.
+## OpenClaw pricing import
+
+QA-approved OpenClaw pricing is imported into `src/data/` with:
+
+```bash
+npm run import:openclaw-pricing
+```
+
+Only files under `pre-import-qa/current/` may be imported:
+
+- `importable-normalized-subscription-prices.json`
+- `importable-normalized-api-prices.json`
+- `metadata-only-records.json`
+
+Do not import raw normalized files, blocked records, excluded regional prices, non-default regional prices, or any SGD records.
+
+- International default pricing: US / USD
+- China default pricing: CN / CNY
+- CNY USD reference values are reference-only when present
+- Metadata-only records are not verified numeric prices
+- Import report: `reports/openclaw-pricing-import-report.json`
+
+Some providers remain pending (for example Perplexity consumer pricing and partial Google pricing). The site does not claim full market coverage.
 
 ## Data-Driven Routes
 

@@ -1,11 +1,811 @@
 [
-  {"id":"model-openai-gpt","slug":"openai-gpt-family","name":"OpenAI GPT family","vendor_id":"vendor-openai","product_id":"product-openai-api","provider_ids":["provider-openai"],"description":"OpenAI GPT model family placeholder for source-backed model records.","model_family":"GPT","modality":["text","vision","multimodal"],"lifecycle_status":"active","context_window_tokens":null,"source_ids":["src-openai-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.65,"quality_flags":["pricing_not_seeded","model_version_not_normalized"],"needs_review":true,"review_reason":"Needs exact model IDs and prices from official sources."},
-  {"id":"model-claude-family","slug":"claude-family","name":"Claude family","vendor_id":"vendor-anthropic","product_id":"product-claude","provider_ids":["provider-anthropic"],"description":"Claude model family placeholder for source-backed model records.","model_family":"Claude","modality":["text","vision","multimodal"],"lifecycle_status":"active","context_window_tokens":null,"source_ids":["src-anthropic-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.65,"quality_flags":["pricing_not_seeded","model_version_not_normalized"],"needs_review":true,"review_reason":"Needs exact model IDs and prices from official sources."},
-  {"id":"model-gemini-family","slug":"gemini-family","name":"Gemini family","vendor_id":"vendor-google","product_id":"product-gemini","provider_ids":["provider-google-ai"],"description":"Gemini model family placeholder for source-backed model records.","model_family":"Gemini","modality":["text","vision","audio","multimodal"],"lifecycle_status":"active","context_window_tokens":null,"source_ids":["src-google-ai-pricing"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.65,"quality_flags":["pricing_not_seeded","model_version_not_normalized"],"needs_review":true,"review_reason":"Needs exact model IDs and prices from official sources."},
-  {"id":"model-deepseek-family","slug":"deepseek-family","name":"DeepSeek family","vendor_id":"vendor-deepseek","product_id":"product-deepseek","provider_ids":["provider-deepseek","provider-openrouter"],"description":"DeepSeek model family placeholder for source-backed model records.","model_family":"DeepSeek","modality":["text"],"lifecycle_status":"active","context_window_tokens":null,"source_ids":["src-deepseek"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.6,"quality_flags":["pricing_not_seeded","model_version_not_normalized"],"needs_review":true,"review_reason":"Needs exact model IDs and prices from official sources."},
-  {"id":"model-kimi-family","slug":"kimi-family","name":"Kimi family","vendor_id":"vendor-moonshot","product_id":"product-kimi","provider_ids":["provider-moonshot"],"description":"Moonshot Kimi model family placeholder for source-backed model records.","model_family":"Kimi","modality":["text"],"lifecycle_status":"active","context_window_tokens":null,"source_ids":["src-kimi"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.58,"quality_flags":["pricing_not_seeded","model_version_not_normalized"],"needs_review":true,"review_reason":"Needs exact model IDs and prices from official sources."},
-  {"id":"model-qwen-family","slug":"qwen-family","name":"Qwen family","vendor_id":"vendor-alibaba","product_id":"product-qwen","provider_ids":["provider-alibaba-model-studio","provider-openrouter"],"description":"Alibaba Qwen model family placeholder for source-backed model records.","model_family":"Qwen","modality":["text","vision","multimodal"],"lifecycle_status":"active","context_window_tokens":null,"source_ids":["src-qwen"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.6,"quality_flags":["pricing_not_seeded","model_version_not_normalized"],"needs_review":true,"review_reason":"Needs exact model IDs and prices from official sources."},
-  {"id":"model-doubao-family","slug":"doubao-family","name":"Doubao family","vendor_id":"vendor-bytedance","product_id":"product-doubao","provider_ids":["provider-volcengine-doubao"],"description":"Doubao model family placeholder for source-backed model records.","model_family":"Doubao","modality":["text","multimodal"],"lifecycle_status":"active","context_window_tokens":null,"source_ids":["src-doubao"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.6,"quality_flags":["pricing_not_seeded","model_version_not_normalized"],"needs_review":true,"review_reason":"Needs exact model IDs and prices from official sources."},
-  {"id":"model-glm-family","slug":"glm-family","name":"GLM family","vendor_id":"vendor-zhipu","product_id":"product-glm","provider_ids":["provider-bigmodel"],"description":"Zhipu GLM model family placeholder for source-backed model records.","model_family":"GLM","modality":["text","multimodal"],"lifecycle_status":"active","context_window_tokens":null,"source_ids":["src-zhipu"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.6,"quality_flags":["pricing_not_seeded","model_version_not_normalized"],"needs_review":true,"review_reason":"Needs exact model IDs and prices from official sources."},
-  {"id":"model-mimo-family","slug":"mimo-family","name":"MiMo family","vendor_id":"vendor-xiaomi","product_id":"product-mimo","provider_ids":[],"description":"Xiaomi MiMo model family placeholder pending commercial availability verification.","model_family":"MiMo","modality":["text"],"lifecycle_status":"unknown","context_window_tokens":null,"source_ids":["src-xiaomi-mimo"],"created_at":"2026-05-17T00:00:00.000Z","updated_at":"2026-05-17T00:00:00.000Z","checked_at":"2026-05-17T00:00:00.000Z","data_status":"pending_verification","verification_status":"pending_verification","confidence_score":0.5,"quality_flags":["pricing_not_seeded","commercial_availability_unknown"],"needs_review":true,"review_reason":"Needs commercial availability and API pricing verification."}
+  {
+    "id": "model-openai-gpt",
+    "slug": "openai-gpt-family",
+    "name": "OpenAI GPT family",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "OpenAI GPT model family placeholder for source-backed model records.",
+    "model_family": "GPT",
+    "modality": [
+      "text",
+      "vision",
+      "multimodal"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-openai-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.65,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "model_version_not_normalized"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs exact model IDs and prices from official sources."
+  },
+  {
+    "id": "model-claude-family",
+    "slug": "claude-family",
+    "name": "Claude family",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Claude model family placeholder for source-backed model records.",
+    "model_family": "Claude",
+    "modality": [
+      "text",
+      "vision",
+      "multimodal"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-anthropic-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.65,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "model_version_not_normalized"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs exact model IDs and prices from official sources."
+  },
+  {
+    "id": "model-gemini-family",
+    "slug": "gemini-family",
+    "name": "Gemini family",
+    "vendor_id": "vendor-google",
+    "product_id": "product-gemini",
+    "provider_ids": [
+      "provider-google-ai"
+    ],
+    "description": "Gemini model family placeholder for source-backed model records.",
+    "model_family": "Gemini",
+    "modality": [
+      "text",
+      "vision",
+      "audio",
+      "multimodal"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-google-ai-pricing"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.65,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "model_version_not_normalized"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs exact model IDs and prices from official sources."
+  },
+  {
+    "id": "model-deepseek-family",
+    "slug": "deepseek-family",
+    "name": "DeepSeek family",
+    "vendor_id": "vendor-deepseek",
+    "product_id": "product-deepseek",
+    "provider_ids": [
+      "provider-deepseek",
+      "provider-openrouter"
+    ],
+    "description": "DeepSeek model family placeholder for source-backed model records.",
+    "model_family": "DeepSeek",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-deepseek"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.6,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "model_version_not_normalized"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs exact model IDs and prices from official sources."
+  },
+  {
+    "id": "model-kimi-family",
+    "slug": "kimi-family",
+    "name": "Kimi family",
+    "vendor_id": "vendor-moonshot",
+    "product_id": "product-kimi",
+    "provider_ids": [
+      "provider-moonshot"
+    ],
+    "description": "Moonshot Kimi model family placeholder for source-backed model records.",
+    "model_family": "Kimi",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-kimi"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.58,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "model_version_not_normalized"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs exact model IDs and prices from official sources."
+  },
+  {
+    "id": "model-qwen-family",
+    "slug": "qwen-family",
+    "name": "Qwen family",
+    "vendor_id": "vendor-alibaba",
+    "product_id": "product-qwen",
+    "provider_ids": [
+      "provider-alibaba-model-studio",
+      "provider-openrouter"
+    ],
+    "description": "Alibaba Qwen model family placeholder for source-backed model records.",
+    "model_family": "Qwen",
+    "modality": [
+      "text",
+      "vision",
+      "multimodal"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-qwen"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.6,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "model_version_not_normalized"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs exact model IDs and prices from official sources."
+  },
+  {
+    "id": "model-doubao-family",
+    "slug": "doubao-family",
+    "name": "Doubao family",
+    "vendor_id": "vendor-bytedance",
+    "product_id": "product-doubao",
+    "provider_ids": [
+      "provider-volcengine-doubao"
+    ],
+    "description": "Doubao model family placeholder for source-backed model records.",
+    "model_family": "Doubao",
+    "modality": [
+      "text",
+      "multimodal"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-doubao"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.6,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "model_version_not_normalized"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs exact model IDs and prices from official sources."
+  },
+  {
+    "id": "model-glm-family",
+    "slug": "glm-family",
+    "name": "GLM family",
+    "vendor_id": "vendor-zhipu",
+    "product_id": "product-glm",
+    "provider_ids": [
+      "provider-bigmodel"
+    ],
+    "description": "Zhipu GLM model family placeholder for source-backed model records.",
+    "model_family": "GLM",
+    "modality": [
+      "text",
+      "multimodal"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-zhipu"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.6,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "model_version_not_normalized"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs exact model IDs and prices from official sources."
+  },
+  {
+    "id": "model-mimo-family",
+    "slug": "mimo-family",
+    "name": "MiMo family",
+    "vendor_id": "vendor-xiaomi",
+    "product_id": "product-mimo",
+    "provider_ids": [],
+    "description": "Xiaomi MiMo model family placeholder pending commercial availability verification.",
+    "model_family": "MiMo",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "unknown",
+    "context_window_tokens": null,
+    "source_ids": [
+      "src-xiaomi-mimo"
+    ],
+    "created_at": "2026-05-17T00:00:00.000Z",
+    "updated_at": "2026-05-17T00:00:00.000Z",
+    "checked_at": "2026-05-17T00:00:00.000Z",
+    "data_status": "pending_verification",
+    "verification_status": "pending_verification",
+    "confidence_score": 0.5,
+    "quality_flags": [
+      "pricing_not_seeded",
+      "commercial_availability_unknown"
+    ],
+    "needs_review": true,
+    "review_reason": "Needs commercial availability and API pricing verification."
+  },
+  {
+    "id": "model-openai-gpt-5-5",
+    "slug": "openai-gpt-5-5",
+    "name": "GPT-5.5",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-5.5 API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "GPT-5.5",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-gpt-5-4",
+    "slug": "openai-gpt-5-4",
+    "name": "GPT-5.4",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-5.4 API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "GPT-5.4",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-gpt-5-4-mini",
+    "slug": "openai-gpt-5-4-mini",
+    "name": "GPT-5.4 mini",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-5.4 mini API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "GPT-5.4 mini",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-gpt-realtime-2",
+    "slug": "openai-gpt-realtime-2",
+    "name": "GPT-Realtime-2",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-Realtime-2 API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "GPT-Realtime-2",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-gpt-realtime-translate",
+    "slug": "openai-gpt-realtime-translate",
+    "name": "GPT-Realtime-Translate",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-Realtime-Translate API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "GPT-Realtime-Translate",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-gpt-realtime-whisper",
+    "slug": "openai-gpt-realtime-whisper",
+    "name": "GPT-Realtime-Whisper",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-Realtime-Whisper API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "GPT-Realtime-Whisper",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-gpt-image-2",
+    "slug": "openai-gpt-image-2",
+    "name": "GPT-Image-2",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "GPT-Image-2 API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "GPT-Image-2",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-web-search",
+    "slug": "openai-web-search",
+    "name": "Web Search",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "Web Search API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Web Search",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-openai-container",
+    "slug": "openai-container",
+    "name": "Container",
+    "vendor_id": "vendor-openai",
+    "product_id": "product-openai-api",
+    "provider_ids": [
+      "provider-openai"
+    ],
+    "description": "Container API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Container",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified_with_warnings",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-anthropic-opus-4-7",
+    "slug": "anthropic-opus-4-7",
+    "name": "Opus 4.7",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Opus 4.7 API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Opus 4.7",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-anthropic-sonnet-4-6",
+    "slug": "anthropic-sonnet-4-6",
+    "name": "Sonnet 4.6",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Sonnet 4.6 API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Sonnet 4.6",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-anthropic-haiku-4-5",
+    "slug": "anthropic-haiku-4-5",
+    "name": "Haiku 4.5",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Haiku 4.5 API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Haiku 4.5",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-anthropic-opus-4-6",
+    "slug": "anthropic-opus-4-6",
+    "name": "Opus 4.6",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Opus 4.6 API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Opus 4.6",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 1,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-anthropic-null",
+    "slug": "anthropic-null",
+    "name": "Code Execution",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Managed Agents API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Code Execution",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 0.9,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-anthropic-platform-managed-agents",
+    "slug": "anthropic-platform-managed-agents",
+    "name": "Managed Agents",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Managed Agents API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Managed Agents",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 0.9,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-anthropic-platform-web-search",
+    "slug": "anthropic-platform-web-search",
+    "name": "Web Search",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Web Search API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Web Search",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 0.9,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  },
+  {
+    "id": "model-anthropic-platform-code-execution",
+    "slug": "anthropic-platform-code-execution",
+    "name": "Code Execution",
+    "vendor_id": "vendor-anthropic",
+    "product_id": "product-claude",
+    "provider_ids": [
+      "provider-anthropic"
+    ],
+    "description": "Code Execution API pricing imported from OpenClaw QA with official source attribution.",
+    "model_family": "Code Execution",
+    "modality": [
+      "text"
+    ],
+    "lifecycle_status": "active",
+    "context_window_tokens": null,
+    "source_ids": [],
+    "created_at": "2026-05-17T14:15:16.000Z",
+    "checked_at": "2026-05-17T14:15:16.000Z",
+    "updated_at": "2026-05-17T14:15:16.000Z",
+    "normalized_at": "2026-05-17T14:15:16.000Z",
+    "data_status": "verified",
+    "verification_status": "verified",
+    "needs_review": false,
+    "confidence_score": 0.9,
+    "quality_flags": [
+      "openclaw_import"
+    ],
+    "review_reason": null
+  }
 ]

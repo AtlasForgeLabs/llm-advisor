@@ -1,0 +1,69 @@
+{
+  "imported_at": "2026-05-17T14:24:47Z",
+  "qa_import_decision": "import_ready_with_warnings",
+  "import_status": "verified_with_warnings",
+  "subscription_imported_count": 10,
+  "api_imported_count": 16,
+  "metadata_only_count": 7,
+  "qa_warnings": [
+    "OpenAI pricing page was localized to Chinese but USD amounts were verified on the official page.",
+    "DeepSeek and ByteDance may need deeper scroll for remaining pricing gaps.",
+    "Perplexity consumer pricing remains pending and was not imported."
+  ],
+  "source_directory": "/Users/mini/AtlasForge/prod-env/atlasforge-data-hub/openclaw/llm-advisor/pre-import-qa/current",
+  "subscription_price_ids": [
+    "sub-openai-free",
+    "sub-openai-go",
+    "sub-openai-plus",
+    "sub-openai-pro",
+    "sub-openai-business",
+    "sub-anthropic-free",
+    "sub-anthropic-pro",
+    "sub-anthropic-team-standard",
+    "sub-anthropic-team-premium",
+    "sub-anthropic-enterprise",
+    "sub-openai-enterprise",
+    "sub-openai-codex-for-work",
+    "sub-anthropic-max",
+    "sub-bytedance-agent-plan-personal",
+    "sub-bytedance-agent-plan-enterprise",
+    "sub-bytedance-coding-plan-personal",
+    "sub-bytedance-coding-plan-enterprise"
+  ],
+  "api_price_ids": [
+    "api-openai-gpt-5.5",
+    "api-openai-gpt-5.4",
+    "api-openai-gpt-5.4-mini",
+    "api-openai-gpt-realtime-2",
+    "api-openai-gpt-realtime-translate",
+    "api-openai-gpt-realtime-whisper",
+    "api-openai-gpt-image-2",
+    "api-openai-web-search",
+    "api-openai-container",
+    "api-anthropic-opus-4-7",
+    "api-anthropic-sonnet-4-6",
+    "api-anthropic-haiku-4-5",
+    "api-anthropic-opus-4-6",
+    "api-anthropic-platform-managed-agents",
+    "api-anthropic-platform-web-search",
+    "api-anthropic-platform-code-execution"
+  ],
+  "metadata_only_ids": [
+    "sub-openai-enterprise",
+    "sub-openai-codex-for-work",
+    "sub-anthropic-max",
+    "sub-bytedance-agent-plan-personal",
+    "sub-bytedance-agent-plan-enterprise",
+    "sub-bytedance-coding-plan-personal",
+    "sub-bytedance-coding-plan-enterprise"
+  ],
+  "retained_pending_subscription_ids": [
+    "sub-chatgpt-team-pending",
+    "sub-gemini-advanced-pending"
+  ],
+  "retained_pending_api_ids": [
+    "api-google-gemini-family-pending",
+    "api-deepseek-family-pending",
+    "api-qwen-family-pending"
+  ]
+}
