@@ -4,6 +4,8 @@
 
 LLM Advisor is a production-oriented static website for AI cost and decision guidance. It helps readers compare AI plans, model pricing, API costs, team costs, pricing changes, and cost-effective product choices.
 
+Public website contact must use `contact@llm-advisor.com`. Do not expose personal email addresses on public pages.
+
 ## Static-Only Rule
 
 This project must remain fully compatible with GitHub Pages.

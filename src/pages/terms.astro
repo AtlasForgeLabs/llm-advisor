@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import InfoPage from '@/components/InfoPage.astro';
+import { site } from '@/data/site';
 ---
 
 <SiteLayout title="Terms" description="Terms of use for LLM Advisor." canonicalPath="/terms">
@@ -8,5 +9,7 @@ import InfoPage from '@/components/InfoPage.astro';
     <p>LLM Advisor provides informational content about AI pricing, plans, and cost decision factors. The content is not financial, legal, procurement, or professional advice.</p>
     <p>Readers are responsible for confirming prices, limits, taxes, discounts, enterprise terms, and product availability with official vendor sources before making decisions.</p>
     <p>Content may be updated, corrected, or removed as products and pricing change. Do not rely on archived or copied versions as current pricing guidance.</p>
+    <p>If advertising, affiliate links, or sponsorships are added later, relevant disclosures must appear with the affected content. No paid subscription or account feature is currently provided by this static website.</p>
+    <p>Questions about these terms can be sent to <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
   </InfoPage>
 </SiteLayout>

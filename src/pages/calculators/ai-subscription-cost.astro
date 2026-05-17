@@ -4,11 +4,12 @@ import SiteLayout from '@/layouts/SiteLayout.astro';
 <SiteLayout title="AI Subscription Cost Calculator" description="Client-side AI subscription cost calculator using manual plan inputs." canonicalPath="/calculators/ai-subscription-cost">
   <section class="page-hero"><div class="container"><h1>AI Subscription Cost Calculator</h1><p>Estimate subscription spend from manual values. This page does not claim any official plan price.</p></div></section>
   <section class="section"><div class="container">
+    <p class="calculator-note">Use current prices from official provider pages or your own billing records. Seeded plan records on LLM Advisor are pending verification and are not injected into this calculator.</p>
     <form class="calculator">
       <label>Plan A monthly cost <input id="sub-a" type="number" min="0" step="0.01" value="0" /></label>
       <label>Plan B monthly cost <input id="sub-b" type="number" min="0" step="0.01" value="0" /></label>
       <label>Number of subscriptions <input id="sub-count" type="number" min="1" step="1" value="1" /></label>
-      <div class="calculator-output"><span>Estimated monthly subscription total</span><strong id="sub-result">$0.00</strong><p>Formula: (Plan A + Plan B) x subscription count.</p></div>
+      <div class="calculator-output"><span>Estimated monthly subscription total</span><strong id="sub-result">$0.00</strong><p>Formula: (Plan A + Plan B) x subscription count. Taxes, annual discounts, regional pricing, and enterprise terms are not included.</p></div>
     </form>
   </div></section>
   <script is:inline>

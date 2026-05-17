@@ -2,6 +2,7 @@ export const site = {
   name: 'LLM Advisor',
   domain: 'llm-advisor.com',
   url: 'https://llm-advisor.com',
+  contactEmail: 'contact@llm-advisor.com',
   description:
     'Compare AI subscriptions, model pricing, and API costs in one place.',
   nav: [

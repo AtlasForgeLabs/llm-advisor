@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import InfoPage from '@/components/InfoPage.astro';
+import { site } from '@/data/site';
 ---
 
 <SiteLayout title="Privacy Policy" description="Privacy policy for the static LLM Advisor website." canonicalPath="/privacy">
@@ -10,6 +11,6 @@ import InfoPage from '@/components/InfoPage.astro';
     <h2>Analytics and third parties</h2>
     <p>If analytics, advertising, affiliate links, or embedded third-party services are added later, this policy must be updated before deployment. Any such additions should be reviewed for privacy impact and disclosed clearly.</p>
     <h2>Contact and corrections</h2>
-    <p>If you contact the project owner through an external channel, information you provide through that channel is governed by the practices of that channel and the project owner's handling process.</p>
+    <p>If you email <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>, the information you send will be used to review and respond to your request. Do not send private account credentials, API keys, or confidential vendor contracts.</p>
   </InfoPage>
 </SiteLayout>

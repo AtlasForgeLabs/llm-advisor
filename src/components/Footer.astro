@@ -9,13 +9,15 @@ import { site } from '@/data/site';
       <span>{site.name}</span>
     </a>
     <p>Static AI cost and decision guidance for subscriptions, APIs, and team usage.</p>
+    <a class="footer-contact" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
   </div>
   <nav aria-label="Footer navigation">
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
     <a href="/methodology">Methodology</a>
     <a href="/editorial-policy">Editorial Policy</a>
     <a href="/disclaimer">Disclaimer</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="/contact">Contact</a>
   </nav>
 </footer>

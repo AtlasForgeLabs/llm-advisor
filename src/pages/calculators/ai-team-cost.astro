@@ -4,11 +4,12 @@ import SiteLayout from '@/layouts/SiteLayout.astro';
 <SiteLayout title="AI Team Cost Calculator" description="Client-side AI team cost calculator using manual seat and API budget inputs." canonicalPath="/calculators/ai-team-cost">
   <section class="page-hero"><div class="container"><h1>AI Team Cost Calculator</h1><p>Estimate team AI spend with manual seat and usage inputs. Verified pricing data is not assumed.</p></div></section>
   <section class="section"><div class="container">
+    <p class="calculator-note">This estimate uses only the values you enter. Confirm official seat prices, billing periods, regional terms, and API usage assumptions before making a purchase decision.</p>
     <form class="calculator">
       <label>Team seats <input id="team-seats" type="number" min="0" step="1" value="0" /></label>
       <label>Cost per seat per month <input id="team-seat-cost" type="number" min="0" step="0.01" value="0" /></label>
       <label>Shared monthly API budget <input id="team-api-budget" type="number" min="0" step="0.01" value="0" /></label>
-      <div class="calculator-output"><span>Estimated monthly team cost</span><strong id="team-result">$0.00</strong><p>Formula: seats x cost per seat + shared API budget.</p></div>
+      <div class="calculator-output"><span>Estimated monthly team cost</span><strong id="team-result">$0.00</strong><p>Formula: seats x cost per seat + shared API budget. It excludes taxes, annual discounts, vendor credits, and enterprise contracts.</p></div>
     </form>
   </div></section>
   <script is:inline>

@@ -12,6 +12,8 @@ The site should maintain readable, project-specific versions of:
 - `/editorial-policy`
 - `/disclaimer`
 
+Public trust pages should use `contact@llm-advisor.com` for corrections and editorial contact.
+
 ## Metadata
 
 Public pages should use meaningful titles, meta descriptions, canonical URLs, Open Graph metadata, and appropriate structured metadata through the shared layout.

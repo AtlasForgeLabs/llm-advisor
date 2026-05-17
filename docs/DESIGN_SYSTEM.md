@@ -62,6 +62,8 @@ Data tables should make uncertainty visible. Use text such as "Pending verificat
 
 Calls to action should be clear and modest. Avoid aggressive SaaS conversion language until the product has substantive comparison content.
 
+Homepage CTAs should prioritize useful static entry points such as plan comparison, API cost calculation, price radar, and methodology.
+
 ## Accessibility Basics
 
 - Use semantic HTML.

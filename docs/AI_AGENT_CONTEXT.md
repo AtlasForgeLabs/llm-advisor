@@ -4,6 +4,8 @@
 
 LLM Advisor is a static Astro website configured for GitHub Pages deployment at `https://llm-advisor.com`.
 
+The public contact email is `contact@llm-advisor.com`.
+
 The current implementation includes:
 
 - shared Astro layouts

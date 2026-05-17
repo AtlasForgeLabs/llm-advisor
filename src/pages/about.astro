@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import InfoPage from '@/components/InfoPage.astro';
+import { site } from '@/data/site';
 ---
 
 <SiteLayout title="About" description="Learn what LLM Advisor is building and how it helps readers compare AI costs." canonicalPath="/about">
@@ -8,6 +9,8 @@ import InfoPage from '@/components/InfoPage.astro';
     <h2>What this project is</h2>
     <p>LLM Advisor is an AI cost and decision platform for individuals, developers, creators, startups, and small teams. The site is designed to help readers understand the real cost of AI products across subscriptions, model APIs, and team usage patterns.</p>
     <h2>Current stage</h2>
-    <p>The project is currently a production-oriented static website foundation. Pricing datasets, calculators, comparisons, and guides will be added in controlled future iterations using static or client-side approaches compatible with GitHub Pages.</p>
+    <p>The project is currently a production-oriented static website with a static data contract, generated directory pages, and client-side calculators. Seeded pricing records are labeled pending verification until official sources are reviewed and normalized.</p>
+    <h2>Contact</h2>
+    <p>For corrections, source updates, and editorial questions, email <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
   </InfoPage>
 </SiteLayout>

@@ -26,7 +26,6 @@ const requiredFiles = [
   'src/pages/disclaimer.astro',
   'src/pages/plans/index.astro',
   'src/pages/api-pricing/index.astro',
-  'src/pages/comparisons.astro',
   'src/pages/calculators/index.astro',
   'src/pages/price-radar/index.astro',
   'src/pages/guides.astro',

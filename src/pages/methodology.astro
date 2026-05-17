@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import InfoPage from '@/components/InfoPage.astro';
+import { site } from '@/data/site';
 ---
 
 <SiteLayout title="Methodology" description="How LLM Advisor plans to compare AI plans, model pricing, API costs, and team costs." canonicalPath="/methodology">
@@ -11,5 +12,7 @@ import InfoPage from '@/components/InfoPage.astro';
     <p>Comparisons should identify units, billing intervals, included usage, overage costs, seat counts, model names, context limits, and any assumptions used in calculations.</p>
     <h2>Recommendation limits</h2>
     <p>LLM Advisor should explain tradeoffs rather than present misleading universal winners. A cost-effective choice depends on workload, usage volume, reliability needs, data policy, and team workflow.</p>
+    <h2>Corrections</h2>
+    <p>Send methodology questions or source corrections to <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>. Include the page URL, official source URL, and date checked.</p>
   </InfoPage>
 </SiteLayout>

@@ -4,12 +4,13 @@ import SiteLayout from '@/layouts/SiteLayout.astro';
 <SiteLayout title="AI API Cost Calculator" description="Client-side AI API cost calculator using manual token and price inputs." canonicalPath="/calculators/ai-api-cost">
   <section class="page-hero"><div class="container"><h1>AI API Cost Calculator</h1><p>Use manual inputs to estimate API spend. No official price is assumed unless you enter a verified value yourself.</p></div></section>
   <section class="section"><div class="container">
+    <p class="calculator-note">This calculator runs entirely in your browser. Enter prices from an official provider page or your own contract. LLM Advisor does not currently supply verified API prices to this tool.</p>
     <form class="calculator" data-calculator="api">
       <label>Input tokens per month <input id="api-input-tokens" type="number" min="0" value="0" /></label>
       <label>Output tokens per month <input id="api-output-tokens" type="number" min="0" value="0" /></label>
       <label>Input price per 1M tokens <input id="api-input-price" type="number" min="0" step="0.0001" value="0" /></label>
       <label>Output price per 1M tokens <input id="api-output-price" type="number" min="0" step="0.0001" value="0" /></label>
-      <div class="calculator-output"><span>Estimated monthly API cost</span><strong id="api-result">$0.00</strong><p>Formula: input tokens / 1,000,000 x input price + output tokens / 1,000,000 x output price.</p></div>
+      <div class="calculator-output"><span>Estimated monthly API cost</span><strong id="api-result">$0.00</strong><p>Formula: input tokens / 1,000,000 x input price + output tokens / 1,000,000 x output price. Taxes, discounts, minimums, caching, and enterprise terms are not included.</p></div>
     </form>
   </div></section>
   <script is:inline>

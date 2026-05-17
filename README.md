@@ -4,6 +4,8 @@ LLM Advisor is an AI cost and decision platform for comparing AI subscriptions, 
 
 The site is intentionally static-first and GitHub Pages-compatible. It is not a SaaS dashboard, backend app, pricing database, crawler, or login-based product at this stage.
 
+Public contact: `contact@llm-advisor.com`.
+
 ## Positioning
 
 LLM Advisor helps individuals, developers, creators, startups, and small teams choose cost-effective AI products by comparing:

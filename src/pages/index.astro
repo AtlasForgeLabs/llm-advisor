@@ -9,7 +9,7 @@ const pillars = [
   },
   {
     title: 'Calculate',
-    text: 'Estimate monthly API, creator, developer, and team spend with client-side tools planned for future releases.'
+    text: 'Estimate API, subscription, and team spend with client-side calculators that use your manual inputs.'
   },
   {
     title: 'Choose',
@@ -23,21 +23,32 @@ const pillars = [
 
 const placeholders = [
   {
-    title: 'AI plans',
-    text: 'Static comparison pages for individual, creator, developer, and team AI subscriptions.'
+    title: 'Compare AI Plans',
+    href: '/plans',
+    text: 'Browse plan records with verification status, source links, and clear pending labels.'
   },
   {
-    title: 'API pricing',
-    text: 'Build-time pricing references for model input, output, context, and usage cost assumptions.'
+    title: 'Calculate API Cost',
+    href: '/calculators/ai-api-cost',
+    text: 'Use manual token and price inputs while verified pricing normalization is pending.'
   },
   {
-    title: 'Team cost calculator',
-    text: 'Future client-side calculators for estimating seat-based and usage-based AI spend.'
+    title: 'Explore Price Radar',
+    href: '/price-radar',
+    text: 'Review price change records only when source and timestamp context are present.'
   },
   {
-    title: 'Price change radar',
-    text: 'A planned static radar for meaningful price, plan, and packaging changes with timestamps.'
+    title: 'View Methodology',
+    href: '/methodology',
+    text: 'Read how LLM Advisor separates verified source data from pending records.'
   }
+];
+
+const trustRows = [
+  ['Official source attribution', 'Every production pricing claim must connect back to source metadata.'],
+  ['Last updated timestamps', 'Records carry checked, updated, and source access dates where available.'],
+  ['Transparent methodology', 'Comparisons explain assumptions instead of presenting universal winners.'],
+  ['No fake prices', 'Null or unverified numeric prices render as pending verification, never as facts.']
 ];
 ---
 
@@ -52,11 +63,15 @@ const placeholders = [
         <h1>AI Cost Advisor for Models, Plans, and API Pricing</h1>
         <p class="hero-copy">Compare AI subscriptions, model pricing, and API costs in one place.</p>
         <div class="hero-actions">
-          <a class="button" href="/methodology">View methodology</a>
-          <a class="button secondary" href="/about">About LLM Advisor</a>
+          <a class="button" href="/plans">Compare AI Plans</a>
+          <a class="button secondary" href="/calculators/ai-api-cost">Calculate API Cost</a>
         </div>
       </div>
       <div class="insight-panel" aria-label="Cost decision preview">
+        <div class="panel-topline">
+          <span>Static data contract</span>
+          <strong>No backend</strong>
+        </div>
         <div class="panel-row">
           <div>
             <p class="panel-label">Decision lens</p>
@@ -80,7 +95,7 @@ const placeholders = [
         </div>
         <div class="panel-row">
           <div>
-            <p class="panel-label">Last foundation update</p>
+            <p class="panel-label">Last updated</p>
             <p class="panel-value">{lastUpdated}</p>
           </div>
           <strong>Public</strong>
@@ -112,23 +127,22 @@ const placeholders = [
   <section class="section soft">
     <div class="container">
       <div class="section-head">
-        <h2>Initial product surfaces</h2>
+        <h2>Start with the right cost question</h2>
         <p>
-          These areas are intentionally initialized as static, production-ready placeholders.
-          Data ingestion, calculators, and large page generation will be added only after the
-          foundation is reviewed.
+          The site is data-driven, but cautious: seeded records are visible only with their
+          verification state, and exact prices are withheld until they are source-backed.
         </p>
       </div>
       <div class="grid">
         {placeholders.map((item) => (
-          <article class="card placeholder-card">
+          <a class="card placeholder-card feature-link" href={item.href}>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
             <div class="tag-row">
-              <span class="tag">Static-first</span>
-              <span class="tag">Build-time data</span>
+              <span class="tag">Static</span>
+              <span class="tag">Source-aware</span>
             </div>
-          </article>
+          </a>
         ))}
       </div>
     </div>
@@ -143,24 +157,20 @@ const placeholders = [
           them. LLM Advisor is structured around source visibility and clear update practices.
         </p>
       </div>
-      <div class="metric-strip">
-        <div class="metric">
-          <strong>Official sources</strong>
-          <span>Pricing and plan references should link to vendor documentation whenever possible.</span>
-        </div>
-        <div class="metric">
-          <strong>Last updated timestamps</strong>
-          <span>Pages should show when pricing or methodology content was last reviewed.</span>
-        </div>
-        <div class="metric">
-          <strong>Transparent methodology</strong>
-          <span>Comparisons must explain assumptions, exclusions, and limits.</span>
-        </div>
-        <div class="metric">
-          <strong>Source attribution</strong>
-          <span>Future data records should preserve source URLs and retrieval dates.</span>
-        </div>
-      </div>
+      <table class="data-table trust-table">
+        <thead>
+          <tr><th>Trust indicator</th><th>How it appears on LLM Advisor</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          {trustRows.map(([label, text]) => (
+            <tr>
+              <td><strong>{label}</strong></td>
+              <td>{text}</td>
+              <td><span class="data-badge green">Built in</span></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   </section>
 </SiteLayout>
