@@ -57,6 +57,13 @@ Every meaningful public page should have:
 
 Do not publish thin placeholder pages that imply content exists when it does not.
 
+## Link Behavior
+
+- Internal routes (`/about`, `/privacy`, relative paths, and same-site URLs) stay in the same tab.
+- External `http`/`https` links must open in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
+- Use `SmartLink` from `src/components/SmartLink.astro` for external URLs, especially data-driven source links.
+- Do not add `target="_blank"` to `mailto:`, `tel:`, or hash-only links.
+
 ## Coding Conventions
 
 - Use Astro components and layouts for shared page structure.
