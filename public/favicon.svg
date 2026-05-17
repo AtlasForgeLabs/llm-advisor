@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">LLM Advisor</title>
+  <rect width="64" height="64" rx="14" fill="#07182f"/>
+  <path d="M16 42V20h6v17h10v5H16Zm20 0V20h6v17h10v5H36Z" fill="#f8fbff"/>
+  <path d="M14 48h36" stroke="#35d399" stroke-width="4" stroke-linecap="round"/>
+</svg>

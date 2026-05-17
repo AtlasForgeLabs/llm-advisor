@@ -1,0 +1,166 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import { lastUpdated } from '@/data/site';
+
+const pillars = [
+  {
+    title: 'Compare',
+    text: 'Review AI subscriptions and usage models side by side with consistent cost categories.'
+  },
+  {
+    title: 'Calculate',
+    text: 'Estimate monthly API, creator, developer, and team spend with client-side tools planned for future releases.'
+  },
+  {
+    title: 'Choose',
+    text: 'Match product options to practical workloads, not generic rankings or one-size-fits-all advice.'
+  },
+  {
+    title: 'Optimize',
+    text: 'Track plan changes, budget impact, and savings opportunities with transparent source attribution.'
+  }
+];
+
+const placeholders = [
+  {
+    title: 'AI plans',
+    text: 'Static comparison pages for individual, creator, developer, and team AI subscriptions.'
+  },
+  {
+    title: 'API pricing',
+    text: 'Build-time pricing references for model input, output, context, and usage cost assumptions.'
+  },
+  {
+    title: 'Team cost calculator',
+    text: 'Future client-side calculators for estimating seat-based and usage-based AI spend.'
+  },
+  {
+    title: 'Price change radar',
+    text: 'A planned static radar for meaningful price, plan, and packaging changes with timestamps.'
+  }
+];
+---
+
+<SiteLayout
+  title="AI Cost Advisor for Models, Plans, and API Pricing"
+  description="Compare AI subscriptions, model pricing, and API costs in one place."
+  canonicalPath="/"
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>AI Cost Advisor for Models, Plans, and API Pricing</h1>
+        <p class="hero-copy">Compare AI subscriptions, model pricing, and API costs in one place.</p>
+        <div class="hero-actions">
+          <a class="button" href="/methodology">View methodology</a>
+          <a class="button secondary" href="/about">About LLM Advisor</a>
+        </div>
+      </div>
+      <div class="insight-panel" aria-label="Cost decision preview">
+        <div class="panel-row">
+          <div>
+            <p class="panel-label">Decision lens</p>
+            <p class="panel-value">Plans, APIs, and team usage</p>
+          </div>
+          <strong>Static</strong>
+        </div>
+        <div class="panel-row">
+          <div>
+            <p class="panel-label">Savings signal</p>
+            <p class="panel-value saving">Optimize cost per workload</p>
+          </div>
+          <strong>Green</strong>
+        </div>
+        <div class="panel-row">
+          <div>
+            <p class="panel-label">Price movement</p>
+            <p class="panel-value change">Track notable plan changes</p>
+          </div>
+          <strong>Orange</strong>
+        </div>
+        <div class="panel-row">
+          <div>
+            <p class="panel-label">Last foundation update</p>
+            <p class="panel-value">{lastUpdated}</p>
+          </div>
+          <strong>Public</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Built for practical AI spending decisions</h2>
+        <p>
+          LLM Advisor is a static AI cost and decision platform for individuals, developers,
+          creators, startups, and small teams comparing AI products and pricing models.
+        </p>
+      </div>
+      <div class="grid">
+        {pillars.map((pillar) => (
+          <article class="card">
+            <h3>{pillar.title}</h3>
+            <p>{pillar.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Initial product surfaces</h2>
+        <p>
+          These areas are intentionally initialized as static, production-ready placeholders.
+          Data ingestion, calculators, and large page generation will be added only after the
+          foundation is reviewed.
+        </p>
+      </div>
+      <div class="grid">
+        {placeholders.map((item) => (
+          <article class="card placeholder-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <div class="tag-row">
+              <span class="tag">Static-first</span>
+              <span class="tag">Build-time data</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Trust signals from day one</h2>
+        <p>
+          Cost recommendations are useful only when readers can inspect the assumptions behind
+          them. LLM Advisor is structured around source visibility and clear update practices.
+        </p>
+      </div>
+      <div class="metric-strip">
+        <div class="metric">
+          <strong>Official sources</strong>
+          <span>Pricing and plan references should link to vendor documentation whenever possible.</span>
+        </div>
+        <div class="metric">
+          <strong>Last updated timestamps</strong>
+          <span>Pages should show when pricing or methodology content was last reviewed.</span>
+        </div>
+        <div class="metric">
+          <strong>Transparent methodology</strong>
+          <span>Comparisons must explain assumptions, exclusions, and limits.</span>
+        </div>
+        <div class="metric">
+          <strong>Source attribution</strong>
+          <span>Future data records should preserve source URLs and retrieval dates.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

@@ -1,0 +1,25 @@
+# Architecture
+
+## Overview
+
+LLM Advisor is a static Astro website designed for GitHub Pages. The architecture prioritizes maintainability, source transparency, and safe future iteration by AI agents.
+
+## Static Astro Website
+
+Astro builds the site into static files in `dist`. Pages are defined in `src/pages/`, shared layouts live in `src/layouts/`, and reusable UI components live in `src/components/`.
+
+## GitHub Pages Deployment
+
+The repository includes `.github/workflows/deploy.yml`, which deploys the static build from the `main` branch using official GitHub Pages actions.
+
+## Data Model
+
+No pricing database exists yet. Future public data should be represented as static JSON or generated before build. Data files should include enough metadata for source attribution and last reviewed dates.
+
+## No Backend
+
+The project must not introduce a backend runtime, server APIs, serverless functions, database server, login system, payment system, or SaaS dashboard without explicit approval.
+
+## Future Calculators
+
+Calculators may be added later as client-side interactive features. They must not require server APIs or private backend storage.

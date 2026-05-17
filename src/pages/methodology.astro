@@ -1,0 +1,15 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import InfoPage from '@/components/InfoPage.astro';
+---
+
+<SiteLayout title="Methodology" description="How LLM Advisor plans to compare AI plans, model pricing, API costs, and team costs." canonicalPath="/methodology">
+  <InfoPage title="Methodology" description="LLM Advisor comparisons should be transparent about sources, assumptions, update dates, and limitations.">
+    <h2>Source preference</h2>
+    <p>Future pricing pages should prefer official vendor pricing pages, documentation, changelogs, and product announcements. Third-party summaries may be useful context but should not replace official sources for pricing claims.</p>
+    <h2>Cost assumptions</h2>
+    <p>Comparisons should identify units, billing intervals, included usage, overage costs, seat counts, model names, context limits, and any assumptions used in calculations.</p>
+    <h2>Recommendation limits</h2>
+    <p>LLM Advisor should explain tradeoffs rather than present misleading universal winners. A cost-effective choice depends on workload, usage volume, reliability needs, data policy, and team workflow.</p>
+  </InfoPage>
+</SiteLayout>

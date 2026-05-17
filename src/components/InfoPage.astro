@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  updated?: string;
+}
+
+const { title, description, updated = '2026-05-17' } = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="page-updated">Last updated: {updated}</p>
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </div>
+</section>
+<section class="content-section">
+  <div class="container narrow prose">
+    <slot />
+  </div>
+</section>
