@@ -30,7 +30,12 @@ npm run check
 
 This runs Astro checks and the foundation validation script.
 It also runs `scripts/validate-data.mjs` to validate static JSON records, references, timestamps, pricing source rules, and generated route files.
-It also runs `scripts/validate-seo.mjs` to validate the built sitemap, robots.txt, CNAME, required sitemap routes, and production canonical URLs. Run `npm run build` before `npm run check` when validating SEO output locally.
+It also runs `scripts/validate-seo.mjs` to validate the built sitemap, robots.txt, CNAME, required sitemap routes, and production canonical URLs.
+It also runs `scripts/validate-adsense.mjs` and `scripts/validate-links.mjs` on the built `dist/` output.
+
+Run `npm run build` before `npm run check` when validating SEO, AdSense, or link output locally.
+
+For public external links, use `SmartLink` (`src/components/SmartLink.astro`). See **Link behavior rules** in `AGENTS.md`.
 
 ## Deployment
 
@@ -45,8 +50,8 @@ For each meaningful task, an AI agent should:
 3. Make scoped changes only.
 4. Preserve source attribution, verification status, and timestamp fields for data changes.
 5. Do not add numeric pricing without source URL and source access timestamp.
-6. Update documentation when architecture, workflow, design, or content rules change.
-7. Run validation commands.
+6. Update documentation when architecture, workflow, design, content rules, or link behavior change.
+7. Run `npm run build` and `npm run check` (includes link validation for public external links).
 8. Summarize files changed, commands run, validation results, and assumptions.
 
 ## Expected Output After Each Agent Task

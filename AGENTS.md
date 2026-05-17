@@ -57,12 +57,44 @@ Every meaningful public page should have:
 
 Do not publish thin placeholder pages that imply content exists when it does not.
 
-## Link Behavior
+## Link behavior rules
 
-- Internal routes (`/about`, `/privacy`, relative paths, and same-site URLs) stay in the same tab.
-- External `http`/`https` links must open in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
-- Use `SmartLink` from `src/components/SmartLink.astro` for external URLs, especially data-driven source links.
-- Do not add `target="_blank"` to `mailto:`, `tel:`, or hash-only links.
+Public links must preserve reader context on LLM Advisor. Use the shared link helpers; do not invent one-off external link markup.
+
+**External links (new tab required)**
+
+- Public external `http`/`https` links must use `SmartLink` from `src/components/SmartLink.astro` or equivalent logic from `src/lib/links.ts` (`isExternalHref`, `externalLinkRel`).
+- External links must open in a new tab: `target="_blank"`.
+- External links must include `rel="noopener noreferrer"`.
+- Do not manually add bare external `<a href="https://...">` links on public pages unless the same `target` and `rel` behavior is guaranteed.
+
+**Internal links (same tab)**
+
+- Internal links must remain same-tab. Do not add `target="_blank"` to internal navigation or in-site content links.
+- Relative paths (for example `/about`, `/privacy`, `/products/...`) are internal.
+- Same-domain absolute links to `llm-advisor.com` (with or without `www`) are internal.
+
+**Special schemes (default behavior)**
+
+- `mailto:`, `tel:`, and hash-only links (`#section`) must not be forced to open in a new tab.
+
+**Data-driven URLs**
+
+When rendering URLs from JSON or other static data, use `SmartLink` (or the same helper logic) in the rendering component. This includes, but is not limited to:
+
+- `source_url` and official source links in `SourceList`
+- vendor `website_url` when displayed
+- Google links (for example ad settings)
+- GitHub links
+- documentation and third-party vendor pages
+
+Do not edit every JSON record manually; fix the component that renders the URL.
+
+**Validation**
+
+- `scripts/validate-links.mjs` checks built HTML in `dist/` after a build.
+- `npm run check` includes link validation and must pass before commit.
+- Run `npm run build` before `npm run check` when validating link output locally.
 
 ## Coding Conventions
 
@@ -94,7 +126,7 @@ npm run build
 npm run check
 ```
 
-`npm run check` runs Astro checks, foundation validation, static data validation, SEO validation, and AdSense readiness validation (after build).
+`npm run check` runs Astro checks, foundation validation, static data validation, SEO validation, AdSense readiness validation, and link validation (after build).
 
 AdSense base script and `public/ads.txt` are integrated for review readiness. Do not add manual ad units or visible ad slots unless explicitly requested.
 
