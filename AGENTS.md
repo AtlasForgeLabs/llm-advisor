@@ -87,7 +87,9 @@ npm run build
 npm run check
 ```
 
-`npm run check` runs Astro checks, foundation validation, and static data validation.
+`npm run check` runs Astro checks, foundation validation, static data validation, SEO validation, and AdSense readiness validation (after build).
+
+AdSense base script and `public/ads.txt` are integrated for review readiness. Do not add manual ad units or visible ad slots unless explicitly requested.
 
 If dependencies are not installed, run `npm install` first.
 

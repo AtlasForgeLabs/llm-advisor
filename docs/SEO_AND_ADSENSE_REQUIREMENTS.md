@@ -36,11 +36,45 @@ https://llm-advisor.com/robots.txt
 
 The sitemap is generated during the Astro build from current static and generated routes, then deployed to GitHub Pages with the rest of `dist`.
 
+Do not block `ads.txt` or Google crawlers in `robots.txt`.
+
 ## Analytics
 
 Google Analytics 4 is integrated globally through the shared layout head with measurement ID `G-FDQ4PYCRD7`.
 
-Analytics is separate from AdSense. Do not add AdSense code, ad placements, or affiliate links unless a task explicitly requests them.
+Analytics is separate from AdSense. GA4 behavior must remain intact when AdSense changes are made.
+
+## AdSense Review Readiness
+
+The site integrates the global AdSense base script once per page in `src/layouts/BaseLayout.astro`.
+
+Publisher client: `ca-pub-6843790293923678`
+
+Authorized sellers file:
+
+```text
+https://llm-advisor.com/ads.txt
+```
+
+`public/ads.txt` must contain:
+
+```text
+google.com, pub-6843790293923678, DIRECT, f08c47fec0942fa0
+```
+
+Manual ad units, visible ad slots, and affiliate links are not implemented yet. Do not add them unless a task explicitly requests them.
+
+AdSense approval and live ad revenue are not guaranteed and should not be claimed in site copy or documentation.
+
+## Future Ad Placement Rules
+
+When ad placements are added after approval and content maturity improves:
+
+- preserve trust, readability, calculators, and user experience
+- avoid excessive above-the-fold ad density
+- do not let advertising determine editorial recommendations
+- disclose affiliate links or sponsored placements before publication
+- update privacy and trust pages when monetization changes materially
 
 ## Source Attribution
 
@@ -64,8 +98,20 @@ Do not display exact numeric prices as facts unless they are source-backed. Pend
 
 ## Affiliate and Sponsored Disclosure Readiness
 
-If affiliate links, sponsorships, or advertising are introduced, relevant pages and policies must disclose those relationships clearly before publication.
+If affiliate links, sponsorships, or advertising relationships change materially, relevant pages and policies must disclose those relationships clearly before publication.
 
 ## Methodology and Disclaimer
 
 The methodology page should explain comparison logic and limitations. The disclaimer page should remind readers to confirm current pricing and terms with official provider sources.
+
+## Validation
+
+`npm run check` validates AdSense readiness after build, including:
+
+- `public/ads.txt` and `dist/ads.txt`
+- the Google seller line in `ads.txt`
+- the AdSense base script in representative built HTML
+- a single AdSense script per representative page
+- GA4 still present
+- privacy page advertising disclosure language
+- existing sitemap and robots checks through `scripts/validate-seo.mjs`

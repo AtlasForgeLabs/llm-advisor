@@ -6,6 +6,7 @@ const root = process.cwd();
 const requiredFiles = [
   'public/CNAME',
   'public/robots.txt',
+  'public/ads.txt',
   'public/favicon.svg',
   '.github/workflows/deploy.yml',
   'README.md',
