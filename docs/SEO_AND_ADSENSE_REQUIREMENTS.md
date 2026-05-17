@@ -18,6 +18,24 @@ Public trust pages should use `contact@llm-advisor.com` for corrections and edit
 
 Public pages should use meaningful titles, meta descriptions, canonical URLs, Open Graph metadata, and appropriate structured metadata through the shared layout.
 
+## Sitemap and Robots
+
+The production domain is `https://llm-advisor.com`.
+
+Submit this sitemap URL to Google Search Console:
+
+```text
+https://llm-advisor.com/sitemap-index.xml
+```
+
+The public robots URL is:
+
+```text
+https://llm-advisor.com/robots.txt
+```
+
+The sitemap is generated during the Astro build from current static and generated routes, then deployed to GitHub Pages with the rest of `dist`.
+
 ## Source Attribution
 
 Pricing and plan claims should cite official vendor sources whenever possible. Source URLs and retrieval or review dates should be preserved in future data files.

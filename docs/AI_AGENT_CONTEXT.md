@@ -52,6 +52,8 @@ Data-driven pages are generated from JSON records under:
 
 Deployment is static GitHub Pages from the `main` branch. The workflow builds Astro output into `dist` and deploys with official GitHub Pages actions.
 
+Astro generates the production sitemap during build. The Search Console sitemap URL is `https://llm-advisor.com/sitemap-index.xml`, and `robots.txt` points to that URL.
+
 ## Known Constraints
 
 - No backend runtime.

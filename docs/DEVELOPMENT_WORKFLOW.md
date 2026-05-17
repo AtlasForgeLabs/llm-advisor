@@ -30,6 +30,7 @@ npm run check
 
 This runs Astro checks and the foundation validation script.
 It also runs `scripts/validate-data.mjs` to validate static JSON records, references, timestamps, pricing source rules, and generated route files.
+It also runs `scripts/validate-seo.mjs` to validate the built sitemap, robots.txt, CNAME, required sitemap routes, and production canonical URLs. Run `npm run build` before `npm run check` when validating SEO output locally.
 
 ## Deployment
 

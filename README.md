@@ -52,6 +52,8 @@ The check command runs Astro validation and a lightweight foundation validator t
 
 It also runs data validation for the static JSON contract, including slug uniqueness, cross-record references, ISO timestamps, and pricing source requirements.
 
+It also validates SEO publishing output after a build, including `robots.txt`, `CNAME`, generated sitemap files, required sitemap routes, and production canonical URLs.
+
 ## Deployment
 
 The project deploys from the `main` branch to GitHub Pages using `.github/workflows/deploy.yml`.
@@ -65,6 +67,24 @@ The workflow:
 - deploys with official GitHub Pages actions
 
 No external secrets are required for normal static deployment.
+
+## SEO Publishing
+
+Production domain: `https://llm-advisor.com`
+
+Google Search Console sitemap URL:
+
+```text
+https://llm-advisor.com/sitemap-index.xml
+```
+
+Robots URL:
+
+```text
+https://llm-advisor.com/robots.txt
+```
+
+The sitemap is generated during `npm run build` by the official Astro sitemap integration from the current static and generated Astro routes. GitHub Actions deploys the generated sitemap files with the rest of `dist`.
 
 ## GitHub Pages Compatibility Rules
 
