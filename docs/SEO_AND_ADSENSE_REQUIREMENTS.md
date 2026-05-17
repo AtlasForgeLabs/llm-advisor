@@ -36,6 +36,12 @@ https://llm-advisor.com/robots.txt
 
 The sitemap is generated during the Astro build from current static and generated routes, then deployed to GitHub Pages with the rest of `dist`.
 
+## Analytics
+
+Google Analytics 4 is integrated globally through the shared layout head with measurement ID `G-FDQ4PYCRD7`.
+
+Analytics is separate from AdSense. Do not add AdSense code, ad placements, or affiliate links unless a task explicitly requests them.
+
 ## Source Attribution
 
 Pricing and plan claims should cite official vendor sources whenever possible. Source URLs and retrieval or review dates should be preserved in future data files.
