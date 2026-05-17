@@ -1,0 +1,11 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+---
+<SiteLayout title="Calculators" description="Client-side AI cost calculators with manual inputs and transparent assumptions." canonicalPath="/calculators">
+  <section class="page-hero"><div class="container"><h1>Calculators</h1><p>These tools run entirely in the browser. Because verified pricing data has not been normalized yet, calculators use manual user-entered values.</p></div></section>
+  <section class="section"><div class="container directory-grid">
+    <a class="card directory-card" href="/calculators/ai-api-cost"><h2>AI API Cost</h2><p>Estimate token-based API spend from manual input and output token volumes.</p></a>
+    <a class="card directory-card" href="/calculators/ai-subscription-cost"><h2>AI Subscription Cost</h2><p>Estimate monthly subscription totals from user-entered plan costs.</p></a>
+    <a class="card directory-card" href="/calculators/ai-team-cost"><h2>AI Team Cost</h2><p>Estimate team seat costs and optional API budget in one client-side tool.</p></a>
+  </div></section>
+</SiteLayout>

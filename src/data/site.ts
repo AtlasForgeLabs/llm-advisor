@@ -7,10 +7,10 @@ export const site = {
   nav: [
     { label: 'Plans', href: '/plans' },
     { label: 'API Pricing', href: '/api-pricing' },
-    { label: 'Comparisons', href: '/comparisons' },
+    { label: 'Comparisons', href: '/compare' },
     { label: 'Calculators', href: '/calculators' },
     { label: 'Price Radar', href: '/price-radar' },
-    { label: 'Guides', href: '/guides' },
+    { label: 'Use Cases', href: '/use-cases' },
     { label: 'About', href: '/about' }
   ]
 };

@@ -1,0 +1,12 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import { getPlans, getProducts } from '@/lib/data';
+const plans = getPlans();
+const products = getProducts();
+const productName = (id: string) => products.find((product) => product.id === id)?.name ?? id;
+---
+<SiteLayout title="AI Plans" description="Directory of AI subscription plans with verification status and source readiness." canonicalPath="/plans">
+  <section class="page-hero"><div class="container"><h1>AI Plans</h1><p>Subscription plan records are ready for source-backed prices. Exact prices remain hidden until verified.</p></div></section>
+  <section class="section"><div class="container directory-grid">{plans.map((plan) => <a class="card directory-card" href={`/plans/${plan.slug}`}><h2>{plan.name}</h2><p>{plan.description}</p><div class="badge-row"><DataBadge label={productName(plan.product_id)} tone="blue" /><DataBadge label={plan.verification_status} tone="orange" /></div></a>)}</div></section>
+</SiteLayout>

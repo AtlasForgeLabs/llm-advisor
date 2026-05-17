@@ -1,0 +1,26 @@
+---
+import type { Source } from '@/lib/schema';
+
+interface Props {
+  sources: Source[];
+}
+
+const { sources } = Astro.props;
+---
+
+<div class="source-list">
+  <h2>Sources</h2>
+  {sources.length === 0 ? (
+    <p>No source has been attached to this record yet. Treat this entry as pending verification.</p>
+  ) : (
+    <ul>
+      {sources.map((source) => (
+        <li>
+          <a href={source.source_url} rel="noopener noreferrer">{source.source_name}</a>
+          <span>{source.source_official ? 'Official' : 'Third-party'}</span>
+          {source.source_accessed_at && <time datetime={source.source_accessed_at}>Accessed {source.source_accessed_at.slice(0, 10)}</time>}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>

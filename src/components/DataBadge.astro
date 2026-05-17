@@ -1,0 +1,10 @@
+---
+interface Props {
+  label: string;
+  tone?: 'blue' | 'green' | 'orange' | 'violet' | 'muted';
+}
+
+const { label, tone = 'muted' } = Astro.props;
+---
+
+<span class={`data-badge ${tone}`}>{label.replaceAll('_', ' ')}</span>

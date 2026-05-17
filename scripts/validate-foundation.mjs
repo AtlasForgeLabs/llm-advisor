@@ -24,12 +24,18 @@ const requiredFiles = [
   'src/pages/methodology.astro',
   'src/pages/editorial-policy.astro',
   'src/pages/disclaimer.astro',
-  'src/pages/plans.astro',
-  'src/pages/api-pricing.astro',
+  'src/pages/plans/index.astro',
+  'src/pages/api-pricing/index.astro',
   'src/pages/comparisons.astro',
-  'src/pages/calculators.astro',
-  'src/pages/price-radar.astro',
-  'src/pages/guides.astro'
+  'src/pages/calculators/index.astro',
+  'src/pages/price-radar/index.astro',
+  'src/pages/guides.astro',
+  'src/pages/vendors/index.astro',
+  'src/pages/products/index.astro',
+  'src/pages/models/index.astro',
+  'src/pages/compare/index.astro',
+  'src/pages/use-cases/index.astro',
+  'src/pages/calculators/index.astro'
 ];
 
 const failures = [];

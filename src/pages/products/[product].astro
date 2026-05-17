@@ -1,0 +1,26 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import RecordSummary from '@/components/RecordSummary.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getPlansByProduct, getProducts, getSourcesByIds, getVendors } from '@/lib/data';
+
+export function getStaticPaths() {
+  return getProducts().map((product) => ({ params: { product: product.slug }, props: { product } }));
+}
+
+const { product } = Astro.props;
+const vendor = getVendors().find((item) => item.id === product.vendor_id);
+const plans = getPlansByProduct(product.id);
+const sources = getSourcesByIds(product.source_ids);
+---
+
+<SiteLayout title={product.name} description={product.description ?? `${product.name} product profile.`} canonicalPath={`/products/${product.slug}`}>
+  <section class="page-hero"><div class="container"><h1>{product.name}</h1><p>{product.description}</p><div class="badge-row"><DataBadge label={product.product_type} tone="blue" /><DataBadge label={product.verification_status} tone="orange" /></div></div></section>
+  <section class="content-section"><div class="container data-shell"><div class="prose">
+    <h2>Vendor</h2><p>{vendor ? <a href={`/vendors/${vendor.slug}`}>{vendor.name}</a> : product.vendor_id}</p>
+    <h2>Capabilities</h2><div class="badge-row">{product.capabilities.map((capability) => <DataBadge label={capability} tone="muted" />)}</div>
+    <h2>Plans</h2><div class="directory-grid">{plans.map((plan) => <a class="card" href={`/plans/${plan.slug}`}><h3>{plan.name}</h3><p>{plan.description}</p></a>)}</div>
+    <SourceList sources={sources} />
+  </div><RecordSummary record={product} extra={[{ label: 'Vendor', value: vendor?.name }, { label: 'Plans', value: plans.length }]} /></div></section>
+</SiteLayout>

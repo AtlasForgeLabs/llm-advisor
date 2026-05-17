@@ -1,0 +1,46 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import RecordSummary from '@/components/RecordSummary.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getModelsByVendor, getProducts, getSourcesByIds, getVendors } from '@/lib/data';
+
+export function getStaticPaths() {
+  return getVendors().map((vendor) => ({ params: { vendor: vendor.slug }, props: { vendor } }));
+}
+
+const { vendor } = Astro.props;
+const products = getProducts().filter((product) => product.vendor_id === vendor.id);
+const models = getModelsByVendor(vendor.id);
+const sources = getSourcesByIds(vendor.source_ids);
+---
+
+<SiteLayout title={vendor.name} description={vendor.description ?? `${vendor.name} vendor profile on LLM Advisor.`} canonicalPath={`/vendors/${vendor.slug}`}>
+  <section class="page-hero">
+    <div class="container">
+      <h1>{vendor.name}</h1>
+      <p>{vendor.description}</p>
+      <div class="badge-row">
+        <DataBadge label={vendor.ecosystem} tone="violet" />
+        <DataBadge label={vendor.lifecycle_status} tone="blue" />
+        <DataBadge label={vendor.verification_status} tone="orange" />
+      </div>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="container data-shell">
+      <div class="prose">
+        <h2>Products</h2>
+        <div class="directory-grid">
+          {products.map((product) => <a class="card" href={`/products/${product.slug}`}><h3>{product.name}</h3><p>{product.description}</p></a>)}
+        </div>
+        <h2>Models</h2>
+        <div class="directory-grid">
+          {models.map((model) => <a class="card" href={`/models/${model.slug}`}><h3>{model.name}</h3><p>{model.description}</p></a>)}
+        </div>
+        <SourceList sources={sources} />
+      </div>
+      <RecordSummary record={vendor} extra={[{ label: 'Products', value: products.length }, { label: 'Models', value: models.length }]} />
+    </div>
+  </section>
+</SiteLayout>

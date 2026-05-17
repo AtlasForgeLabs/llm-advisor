@@ -1,0 +1,10 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import { getComparisons } from '@/lib/data';
+const comparisons = getComparisons();
+---
+<SiteLayout title="Comparisons" description="Source-aware AI comparison pages without unverified price claims." canonicalPath="/compare">
+  <section class="page-hero"><div class="container"><h1>Comparisons</h1><p>Comparison pages show decision factors and verification state before any source-backed rankings are introduced.</p></div></section>
+  <section class="section"><div class="container directory-grid">{comparisons.map((comparison) => <a class="card directory-card" href={`/compare/${comparison.slug}`}><h2>{comparison.name}</h2><p>{comparison.description}</p><div class="badge-row"><DataBadge label={comparison.comparison_type} tone="blue" /><DataBadge label={comparison.verification_status} tone="orange" /></div></a>)}</div></section>
+</SiteLayout>

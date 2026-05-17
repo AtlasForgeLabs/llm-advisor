@@ -1,0 +1,19 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import RecordSummary from '@/components/RecordSummary.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getComparisons, getProducts, getSourcesByIds } from '@/lib/data';
+export function getStaticPaths() { return getComparisons().map((comparison) => ({ params: { comparison: comparison.slug }, props: { comparison } })); }
+const { comparison } = Astro.props;
+const products = getProducts().filter((product) => comparison.product_ids?.includes(product.id));
+const sources = getSourcesByIds(comparison.source_ids);
+---
+<SiteLayout title={comparison.name} description={comparison.description ?? `${comparison.name} comparison.`} canonicalPath={`/compare/${comparison.slug}`}>
+  <section class="page-hero"><div class="container"><h1>{comparison.name}</h1><p>{comparison.description}</p><div class="badge-row"><DataBadge label={comparison.verification_status} tone="orange" /><DataBadge label="no unverified prices" tone="green" /></div></div></section>
+  <section class="content-section"><div class="container data-shell"><div class="prose">
+    <h2>Decision factors</h2><ul>{comparison.decision_factors.map((factor) => <li>{factor}</li>)}</ul>
+    <h2>Products in scope</h2><div class="directory-grid">{products.map((product) => <a class="card" href={`/products/${product.slug}`}><h3>{product.name}</h3><p>{product.description}</p></a>)}</div>
+    <SourceList sources={sources} />
+  </div><RecordSummary record={comparison} extra={[{ label: 'Products', value: products.length }]} /></div></section>
+</SiteLayout>

@@ -11,8 +11,13 @@ The current implementation includes:
 - global CSS design tokens
 - a production-oriented homepage
 - essential trust, legal, and policy pages
+- production TypeScript data schemas
+- canonical static JSON data files
+- data loading helpers
+- data-driven directory and detail pages
+- client-side calculator pages
 - GitHub Actions deployment workflow
-- lightweight foundation validation script
+- lightweight foundation and data validation scripts
 
 ## Important Directories
 
@@ -21,6 +26,7 @@ The current implementation includes:
 - `src/components/`: reusable UI/content components
 - `src/styles/`: global styles
 - `src/data/`: static constants and future static data
+- `src/lib/`: TypeScript schema and data loading utilities
 - `public/`: static public assets
 - `docs/`: project documentation for humans and AI agents
 - `scripts/`: local validation scripts
@@ -28,6 +34,17 @@ The current implementation includes:
 ## Page Organization
 
 Astro file-based routing is used. The homepage is `src/pages/index.astro`. Trust and legal pages are separate route files under `src/pages/`.
+
+Data-driven pages are generated from JSON records under:
+
+- `/vendors`
+- `/products`
+- `/plans`
+- `/models`
+- `/api-pricing`
+- `/compare`
+- `/use-cases`
+- `/price-radar`
 
 ## Deployment Model
 
@@ -40,5 +57,6 @@ Deployment is static GitHub Pages from the `main` branch. The workflow builds As
 - No database server.
 - No login or payments.
 - No scraping or OpenClaw automation in the current foundation.
-- Future public data must be build-time/static JSON.
-- Future calculators must be client-side only.
+- Public data is build-time/static JSON.
+- Calculators are client-side only and currently rely on manual inputs.
+- Exact numeric prices are not seeded unless source-backed.

@@ -29,6 +29,7 @@ npm run check
 ```
 
 This runs Astro checks and the foundation validation script.
+It also runs `scripts/validate-data.mjs` to validate static JSON records, references, timestamps, pricing source rules, and generated route files.
 
 ## Deployment
 
@@ -41,9 +42,11 @@ For each meaningful task, an AI agent should:
 1. Inspect the current repository state.
 2. Keep the project static and GitHub Pages-compatible.
 3. Make scoped changes only.
-4. Update documentation when architecture, workflow, design, or content rules change.
-5. Run validation commands.
-6. Summarize files changed, commands run, validation results, and assumptions.
+4. Preserve source attribution, verification status, and timestamp fields for data changes.
+5. Do not add numeric pricing without source URL and source access timestamp.
+6. Update documentation when architecture, workflow, design, or content rules change.
+7. Run validation commands.
+8. Summarize files changed, commands run, validation results, and assumptions.
 
 ## Expected Output After Each Agent Task
 

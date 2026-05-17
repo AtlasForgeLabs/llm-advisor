@@ -1,0 +1,35 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import { getDataFreshnessSummary, getVendors } from '@/lib/data';
+
+const vendors = getVendors();
+const freshness = getDataFreshnessSummary();
+---
+
+<SiteLayout title="AI Vendors" description="Directory of AI vendors in the LLM Advisor static data contract." canonicalPath="/vendors">
+  <section class="page-hero">
+    <div class="container">
+      <h1>AI Vendors</h1>
+      <p>Production-shaped vendor records for US/global and China AI ecosystems. Pricing is not shown unless source-backed.</p>
+      <div class="badge-row">
+        <DataBadge label={`${freshness.record_count} records`} tone="blue" />
+        <DataBadge label={`${freshness.pending_verification_count} pending verification`} tone="orange" />
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container directory-grid">
+      {vendors.map((vendor) => (
+        <a class="card directory-card" href={`/vendors/${vendor.slug}`}>
+          <h2>{vendor.name}</h2>
+          <p>{vendor.description}</p>
+          <div class="badge-row">
+            <DataBadge label={vendor.ecosystem} tone="violet" />
+            <DataBadge label={vendor.verification_status} tone="orange" />
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</SiteLayout>

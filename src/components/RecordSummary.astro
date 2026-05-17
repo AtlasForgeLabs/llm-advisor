@@ -1,0 +1,46 @@
+---
+import DataBadge from './DataBadge.astro';
+import type { BaseRecord } from '@/lib/schema';
+
+interface Props {
+  record: BaseRecord;
+  extra?: Array<{ label: string; value?: string | number | null }>;
+}
+
+const { record, extra = [] } = Astro.props;
+---
+
+<aside class="record-summary">
+  <div>
+    <p class="summary-label">Data status</p>
+    <DataBadge label={record.data_status} tone={record.data_status === 'verified' ? 'green' : 'orange'} />
+  </div>
+  <div>
+    <p class="summary-label">Verification</p>
+    <DataBadge label={record.verification_status} tone={record.verification_status === 'verified' ? 'green' : 'orange'} />
+  </div>
+  {record.checked_at && (
+    <div>
+      <p class="summary-label">Last checked</p>
+      <time datetime={record.checked_at}>{record.checked_at.slice(0, 10)}</time>
+    </div>
+  )}
+  {record.updated_at && (
+    <div>
+      <p class="summary-label">Updated</p>
+      <time datetime={record.updated_at}>{record.updated_at.slice(0, 10)}</time>
+    </div>
+  )}
+  {extra.filter((item) => item.value !== undefined && item.value !== null).map((item) => (
+    <div>
+      <p class="summary-label">{item.label}</p>
+      <strong>{item.value}</strong>
+    </div>
+  ))}
+  {record.needs_review && record.review_reason && (
+    <div class="review-note">
+      <p class="summary-label">Review note</p>
+      <p>{record.review_reason}</p>
+    </div>
+  )}
+</aside>

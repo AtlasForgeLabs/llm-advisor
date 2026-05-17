@@ -52,6 +52,12 @@ Future pricing tables should prioritize scanability, source dates, units, and cl
 
 Badges should communicate real status, such as static-first, source type, update recency, savings, or price movement. Avoid decorative badges with no informational value.
 
+Data pages use badges for verification status, data status, ecosystem, lifecycle, provider type, and workload type. Orange communicates pending verification or review states; green is reserved for verified or savings-oriented states.
+
+## Data Tables
+
+Data tables should make uncertainty visible. Use text such as "Pending verification" instead of blank or invented values when numeric pricing is not source-backed.
+
 ## CTA Rules
 
 Calls to action should be clear and modest. Avoid aggressive SaaS conversion language until the product has substantive comparison content.

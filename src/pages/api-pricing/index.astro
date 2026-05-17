@@ -1,0 +1,12 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import { getProviders, getVendors } from '@/lib/data';
+const providers = getProviders();
+const vendors = getVendors();
+const vendorName = (id: string) => vendors.find((vendor) => vendor.id === id)?.name ?? id;
+---
+<SiteLayout title="API Pricing" description="Directory of API providers prepared for verified model price records." canonicalPath="/api-pricing">
+  <section class="page-hero"><div class="container"><h1>API Pricing</h1><p>Provider records and pending price slots are ready for source-backed model pricing. No fake prices are displayed.</p></div></section>
+  <section class="section"><div class="container directory-grid">{providers.map((provider) => <a class="card directory-card" href={`/api-pricing/${provider.slug}`}><h2>{provider.name}</h2><p>{provider.description}</p><div class="badge-row"><DataBadge label={vendorName(provider.vendor_id)} tone="blue" /><DataBadge label={provider.verification_status} tone="orange" /></div></a>)}</div></section>
+</SiteLayout>

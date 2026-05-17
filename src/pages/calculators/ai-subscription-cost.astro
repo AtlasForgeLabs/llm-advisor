@@ -1,0 +1,24 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+---
+<SiteLayout title="AI Subscription Cost Calculator" description="Client-side AI subscription cost calculator using manual plan inputs." canonicalPath="/calculators/ai-subscription-cost">
+  <section class="page-hero"><div class="container"><h1>AI Subscription Cost Calculator</h1><p>Estimate subscription spend from manual values. This page does not claim any official plan price.</p></div></section>
+  <section class="section"><div class="container">
+    <form class="calculator">
+      <label>Plan A monthly cost <input id="sub-a" type="number" min="0" step="0.01" value="0" /></label>
+      <label>Plan B monthly cost <input id="sub-b" type="number" min="0" step="0.01" value="0" /></label>
+      <label>Number of subscriptions <input id="sub-count" type="number" min="1" step="1" value="1" /></label>
+      <div class="calculator-output"><span>Estimated monthly subscription total</span><strong id="sub-result">$0.00</strong><p>Formula: (Plan A + Plan B) x subscription count.</p></div>
+    </form>
+  </div></section>
+  <script is:inline>
+    const subFields = ['sub-a', 'sub-b', 'sub-count'].map((id) => document.getElementById(id));
+    const subResult = document.getElementById('sub-result');
+    function updateSubscriptionCost() {
+      const [a, b, count] = subFields.map((field) => Number(field.value || 0));
+      subResult.textContent = `$${((a + b) * count).toFixed(2)}`;
+    }
+    subFields.forEach((field) => field.addEventListener('input', updateSubscriptionCost));
+    updateSubscriptionCost();
+  </script>
+</SiteLayout>

@@ -1,0 +1,143 @@
+[
+  {
+    "id": "src-openai-pricing",
+    "source_url": "https://openai.com/api/pricing/",
+    "source_name": "OpenAI API Pricing",
+    "source_type": "official_pricing_page",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.9,
+    "source_notes": "Official pricing source URL recorded for future verification. Exact values are not seeded in this task.",
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-openai-chatgpt-pricing",
+    "source_url": "https://openai.com/chatgpt/pricing/",
+    "source_name": "ChatGPT Pricing",
+    "source_type": "official_pricing_page",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.9,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-anthropic-pricing",
+    "source_url": "https://www.anthropic.com/pricing",
+    "source_name": "Anthropic Pricing",
+    "source_type": "official_pricing_page",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.9,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-google-ai-pricing",
+    "source_url": "https://ai.google.dev/pricing",
+    "source_name": "Google AI Pricing",
+    "source_type": "official_pricing_page",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.85,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-microsoft-copilot",
+    "source_url": "https://www.microsoft.com/en-us/microsoft-copilot",
+    "source_name": "Microsoft Copilot",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.8,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-perplexity-pro",
+    "source_url": "https://www.perplexity.ai/pro",
+    "source_name": "Perplexity Pro",
+    "source_type": "official_pricing_page",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.8,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-openrouter",
+    "source_url": "https://openrouter.ai/docs",
+    "source_name": "OpenRouter Documentation",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.8,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-deepseek",
+    "source_url": "https://api-docs.deepseek.com/",
+    "source_name": "DeepSeek API Docs",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.8,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-kimi",
+    "source_url": "https://platform.moonshot.cn/docs",
+    "source_name": "Moonshot AI Platform Docs",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.75,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-minimax",
+    "source_url": "https://www.minimax.io/platform",
+    "source_name": "MiniMax Platform",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.7,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-qwen",
+    "source_url": "https://help.aliyun.com/zh/model-studio/",
+    "source_name": "Alibaba Cloud Model Studio",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.75,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-doubao",
+    "source_url": "https://www.volcengine.com/product/doubao",
+    "source_name": "ByteDance Doubao on Volcano Engine",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.75,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-zhipu",
+    "source_url": "https://open.bigmodel.cn/",
+    "source_name": "Zhipu BigModel Platform",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.75,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "src-xiaomi-mimo",
+    "source_url": "https://github.com/XiaomiMiMo/MiMo",
+    "source_name": "Xiaomi MiMo",
+    "source_type": "official_docs",
+    "source_official": true,
+    "source_accessed_at": "2026-05-17T00:00:00.000Z",
+    "source_confidence": 0.7,
+    "checked_at": "2026-05-17T00:00:00.000Z"
+  }
+]

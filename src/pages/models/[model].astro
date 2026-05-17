@@ -1,0 +1,19 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import RecordSummary from '@/components/RecordSummary.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getModels, getSourcesByIds, getVendors } from '@/lib/data';
+export function getStaticPaths() { return getModels().map((model) => ({ params: { model: model.slug }, props: { model } })); }
+const { model } = Astro.props;
+const vendor = getVendors().find((item) => item.id === model.vendor_id);
+const sources = getSourcesByIds(model.source_ids);
+---
+<SiteLayout title={model.name} description={model.description ?? `${model.name} model profile.`} canonicalPath={`/models/${model.slug}`}>
+  <section class="page-hero"><div class="container"><h1>{model.name}</h1><p>{model.description}</p><div class="badge-row"><DataBadge label={model.model_family ?? 'model'} tone="blue" /><DataBadge label={model.verification_status} tone="orange" /></div></div></section>
+  <section class="content-section"><div class="container data-shell"><div class="prose">
+    <h2>Model data status</h2><p>Exact model IDs, context windows, and pricing values are not displayed until source-backed records are normalized.</p>
+    <h2>Modalities</h2><div class="badge-row">{model.modality.map((item) => <DataBadge label={item} tone="muted" />)}</div>
+    <SourceList sources={sources} />
+  </div><RecordSummary record={model} extra={[{ label: 'Vendor', value: vendor?.name }, { label: 'Context window', value: model.context_window_tokens ?? 'Pending' }]} /></div></section>
+</SiteLayout>

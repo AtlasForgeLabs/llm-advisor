@@ -22,4 +22,12 @@ The project must not introduce a backend runtime, server APIs, serverless functi
 
 ## Future Calculators
 
-Calculators may be added later as client-side interactive features. They must not require server APIs or private backend storage.
+Calculator pages now exist under `/calculators` and run entirely client-side with manual user inputs. They do not use backend APIs, tracking dependencies, or unverified official prices.
+
+## Data-Driven Page Factory
+
+The static data contract is defined in `src/lib/schema.ts`, with loading helpers in `src/lib/data.ts`.
+
+Static JSON files in `src/data/` feed directory and detail routes for vendors, products, plans, models, API providers, comparisons, use cases, and price radar entries. Astro statically generates these pages at build time.
+
+Seed records include US/global and China AI ecosystems. They are production-shaped but mostly pending verification, with exact numeric prices omitted or set to `null`.

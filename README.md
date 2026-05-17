@@ -48,6 +48,8 @@ npm run check
 
 The check command runs Astro validation and a lightweight foundation validator that confirms required pages, docs, CNAME, and non-empty content are present.
 
+It also runs data validation for the static JSON contract, including slug uniqueness, cross-record references, ISO timestamps, and pricing source requirements.
+
 ## Deployment
 
 The project deploys from the `main` branch to GitHub Pages using `.github/workflows/deploy.yml`.
@@ -86,3 +88,26 @@ No external secrets are required for normal static deployment.
 - large page generation
 
 See `AGENTS.md` and `docs/` before making meaningful changes.
+
+## Data Contract
+
+The production data contract lives in `src/lib/schema.ts`. Static records live in `src/data/*.json`.
+
+Current data files include vendors, products, plans, models, providers, API price placeholders, subscription price placeholders, comparisons, use cases, price changes, and sources.
+
+Important: seeded records are production-shaped but mostly pending verification. Exact numeric prices are intentionally omitted or `null` until source-backed values are added with source URL and access timestamps.
+
+## Data-Driven Routes
+
+The site now statically generates directory and detail pages for:
+
+- `/vendors`
+- `/products`
+- `/plans`
+- `/models`
+- `/api-pricing`
+- `/compare`
+- `/use-cases`
+- `/price-radar`
+
+Client-side calculators are available under `/calculators`. They use user-entered values and do not claim official prices.

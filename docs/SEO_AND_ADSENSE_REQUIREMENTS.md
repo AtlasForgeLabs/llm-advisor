@@ -20,6 +20,8 @@ Public pages should use meaningful titles, meta descriptions, canonical URLs, Op
 
 Pricing and plan claims should cite official vendor sources whenever possible. Source URLs and retrieval or review dates should be preserved in future data files.
 
+The implemented static data contract supports source IDs, source URLs, official-source flags, source access timestamps, confidence notes, verification status, and quality flags.
+
 ## Last Updated Timestamps
 
 Pages containing pricing-sensitive information should show last updated or last reviewed timestamps.
@@ -31,6 +33,8 @@ Do not publish empty, generic, or TODO-only pages. Planned features should be la
 ## Recommendation Claims
 
 Avoid misleading universal recommendations. Explain assumptions and tradeoffs, especially when comparing subscriptions, API costs, team seats, model quality, latency, or usage limits.
+
+Do not display exact numeric prices as facts unless they are source-backed. Pending records should be labeled visibly as pending verification.
 
 ## Affiliate and Sponsored Disclosure Readiness
 

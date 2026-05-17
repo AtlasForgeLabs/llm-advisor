@@ -1,0 +1,22 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import RecordSummary from '@/components/RecordSummary.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getPlans, getProducts, getSourcesByIds, getSubscriptionPricesByPlan } from '@/lib/data';
+export function getStaticPaths() { return getPlans().map((plan) => ({ params: { plan: plan.slug }, props: { plan } })); }
+const { plan } = Astro.props;
+const product = getProducts().find((item) => item.id === plan.product_id);
+const prices = getSubscriptionPricesByPlan(plan.id);
+const sources = getSourcesByIds(plan.source_ids);
+---
+<SiteLayout title={plan.name} description={plan.description ?? `${plan.name} plan profile.`} canonicalPath={`/plans/${plan.slug}`}>
+  <section class="page-hero"><div class="container"><h1>{plan.name}</h1><p>{plan.description}</p><div class="badge-row"><DataBadge label={plan.plan_type} tone="blue" /><DataBadge label={plan.verification_status} tone="orange" /></div></div></section>
+  <section class="content-section"><div class="container data-shell"><div class="prose">
+    <h2>Price records</h2>
+    <table class="data-table"><thead><tr><th>Currency</th><th>Unit</th><th>Amount</th><th>Status</th></tr></thead><tbody>{prices.map((price) => <tr><td>{price.currency}</td><td>{price.billing_unit}</td><td>{price.amount ?? 'Pending verification'}</td><td>{price.verification_status}</td></tr>)}</tbody></table>
+    <p>Exact prices are not displayed until a numeric amount has official source attribution and access timestamps.</p>
+    <h2>Features</h2><div class="directory-grid">{plan.features.map((feature) => <article class="card"><h3>{feature.name}</h3><p>{feature.description}</p></article>)}</div>
+    <SourceList sources={sources} />
+  </div><RecordSummary record={plan} extra={[{ label: 'Product', value: product?.name }, { label: 'Price records', value: prices.length }]} /></div></section>
+</SiteLayout>

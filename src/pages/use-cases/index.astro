@@ -1,0 +1,10 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import { getUseCases } from '@/lib/data';
+const useCases = getUseCases();
+---
+<SiteLayout title="Use Cases" description="AI cost use-case directory for individuals, developers, startups, and small teams." canonicalPath="/use-cases">
+  <section class="page-hero"><div class="container"><h1>Use Cases</h1><p>Use-case records connect audiences, workloads, products, and cost decision factors.</p></div></section>
+  <section class="section"><div class="container directory-grid">{useCases.map((useCase) => <a class="card directory-card" href={`/use-cases/${useCase.slug}`}><h2>{useCase.name}</h2><p>{useCase.description}</p><div class="badge-row"><DataBadge label={useCase.workload_type} tone="blue" /><DataBadge label={useCase.verification_status} tone="orange" /></div></a>)}</div></section>
+</SiteLayout>

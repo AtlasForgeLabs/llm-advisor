@@ -1,0 +1,12 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import { getModels, getVendors } from '@/lib/data';
+const models = getModels();
+const vendors = getVendors();
+const vendorName = (id: string) => vendors.find((vendor) => vendor.id === id)?.name ?? id;
+---
+<SiteLayout title="AI Models" description="Directory of AI model family records prepared for source-backed API pricing." canonicalPath="/models">
+  <section class="page-hero"><div class="container"><h1>AI Models</h1><p>Model family records are normalized for future exact model IDs, context windows, and verified API prices.</p></div></section>
+  <section class="section"><div class="container directory-grid">{models.map((model) => <a class="card directory-card" href={`/models/${model.slug}`}><h2>{model.name}</h2><p>{model.description}</p><div class="badge-row"><DataBadge label={vendorName(model.vendor_id)} tone="blue" /><DataBadge label={model.verification_status} tone="orange" /></div></a>)}</div></section>
+</SiteLayout>

@@ -1,0 +1,15 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import RecordSummary from '@/components/RecordSummary.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getPriceChanges, getSourcesByIds } from '@/lib/data';
+const changes = getPriceChanges();
+---
+<SiteLayout title="Price Radar" description="Source-aware AI price change radar with verification status and timestamps." canonicalPath="/price-radar">
+  <section class="page-hero"><div class="container"><h1>Price Radar</h1><p>Tracks meaningful AI price, plan, and packaging changes only when source-backed. Current records are pending verification.</p></div></section>
+  <section class="section"><div class="container">
+    <table class="data-table"><thead><tr><th>Change</th><th>Impact</th><th>Status</th><th>Published</th></tr></thead><tbody>{changes.map((change) => <tr><td><strong>{change.name}</strong><p>{change.summary}</p></td><td><DataBadge label={change.impact_level} tone="orange" /></td><td><DataBadge label={change.verification_status} tone="orange" /></td><td>{change.published_at?.slice(0, 10) ?? 'Pending'}</td></tr>)}</tbody></table>
+    {changes.map((change) => <div class="data-shell" style="margin-top: 28px;"><div><SourceList sources={getSourcesByIds(change.source_ids)} /></div><RecordSummary record={change} extra={[{ label: 'Change type', value: change.change_type }]} /></div>)}
+  </div></section>
+</SiteLayout>

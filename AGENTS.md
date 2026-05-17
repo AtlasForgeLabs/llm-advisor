@@ -21,6 +21,16 @@ Do not add:
 
 Public data must be static JSON or generated before the Astro build. Calculators and interactive features must be client-side only.
 
+## Data Contract Rules
+
+The production schema is defined in `src/lib/schema.ts`. Static JSON records live in `src/data/`.
+
+Every price, plan, model, provider, product, comparison, use case, and source record should preserve verification status, quality status, timestamps, and source references where applicable.
+
+Do not add exact numeric pricing unless the record includes source attribution and a source access timestamp. Use `null` or omit the numeric value until verified.
+
+Visible pages must distinguish verified data from pending verification and must show source and timestamp context where relevant.
+
 ## Design Principles
 
 - light-first interface
@@ -61,6 +71,7 @@ Do not publish thin placeholder pages that imply content exists when it does not
 - `src/components/`: reusable page components
 - `src/styles/`: global styles and design tokens
 - `src/data/`: static project data and constants
+- `src/lib/`: schema and data-loading utilities
 - `public/`: static assets, `CNAME`, `robots.txt`, favicon
 - `docs/`: architecture, workflow, SEO, design, and AI-agent documentation
 - `.github/workflows/`: GitHub Pages deployment
@@ -73,6 +84,8 @@ Before finishing a task, run the most relevant validation commands. For normal s
 npm run build
 npm run check
 ```
+
+`npm run check` runs Astro checks, foundation validation, and static data validation.
 
 If dependencies are not installed, run `npm install` first.
 

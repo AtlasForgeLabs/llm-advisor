@@ -1,0 +1,24 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import DataBadge from '@/components/DataBadge.astro';
+import { getProducts, getVendors } from '@/lib/data';
+
+const products = getProducts();
+const vendors = getVendors();
+const vendorName = (id: string) => vendors.find((vendor) => vendor.id === id)?.name ?? id;
+---
+
+<SiteLayout title="AI Products" description="Directory of AI products prepared for source-backed pricing data." canonicalPath="/products">
+  <section class="page-hero"><div class="container"><h1>AI Products</h1><p>Static product records for AI assistants, API platforms, routers, and model families.</p></div></section>
+  <section class="section">
+    <div class="container directory-grid">
+      {products.map((product) => (
+        <a class="card directory-card" href={`/products/${product.slug}`}>
+          <h2>{product.name}</h2>
+          <p>{product.description}</p>
+          <div class="badge-row"><DataBadge label={vendorName(product.vendor_id)} tone="blue" /><DataBadge label={product.verification_status} tone="orange" /></div>
+        </a>
+      ))}
+    </div>
+  </section>
+</SiteLayout>
